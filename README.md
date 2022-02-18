@@ -55,3 +55,24 @@ Dans un premier temps, il faudrait imaginer une maquette avec un design + aperç
     - L'organisation des informations sur chaque page (user interface)
         - Textes
         - Images/vidéos/autre médias
+
+
+### Quelques idées pour le design dans la maquette
+A la base, ce projet est un projet d'immersion dans une culture. Donc il y a des éléments d'hospitalité, d'être accueillant et chaleureux, et d'un sens de passion dans le partage des éléments d'une culture qui invite les autres à la découvrir et à mieux la connaître.
+
+Qu'est-ce qui fait qu'on a envie de cliquer sur le site et d'y rester pour le naviguer ? La partie vitrine (pour le visiteur non connecté (encore)) devra faire cet appel de rejoindre cette communauté.
+(Dans les Ressources, quelques liens d'articles sur les couleurs et le design d'un site en général).
+---
+
+## Ressources
+- Couleurs: 
+    - https://www.business2community.com/marketing/10-colors-that-increase-sales-and-why-0366997
+    - https://en.99designs.be/blog/tips/website-color-schemes/
+    - https://visme.co/blog/website-color-schemes/
+        - 1
+        - 11
+        - 14
+        - 25
+        - 50
+    - https://neilpatel.com/blog/psychology-of-color-and-conversions/
+    - https://www.crazyegg.com/blog/website-color-palettes/
