@@ -2,6 +2,17 @@
 Projet client 
 
 ## L'équipe
+Teodora Cozma
+Brigita Sabutyte
+Thomas Melchers
+Gizem Onur
+
+## Outils et ressources
+Trello board : https://trello.com/b/MJf55WmB/client-project
+VS Code : text editor
+Structure du site/information architecture : https://dbdiagram.io/d
+Wireframe mockup : Adobe XD
+Hi-FI prototype : Framer
 
 ## Le projet
 
@@ -62,6 +73,53 @@ A la base, ce projet est un projet d'immersion dans une culture. Donc il y a des
 
 Qu'est-ce qui fait qu'on a envie de cliquer sur le site et d'y rester pour le naviguer ? La partie vitrine (pour le visiteur non connecté (encore)) devra faire cet appel de rejoindre cette communauté.
 (Dans les Ressources, quelques liens d'articles sur les couleurs et le design d'un site en général).
+
+### Premier meeting
+Idées pour le visuel :
+- Couleurs : orange, ; ça doit se marier ensemble.
+- Maquette : fonctionnalités
+    - Une journée d'immersion : formule qui inclut une visite à d'autres lieux (restaurants) qui sont également des partenaires. Puis activités, workshops
+- Public cible : d'abord les Belges qui sont intéressés par la culture africaine, puis les touristes qui viennent en Belgique pour en découvrir d'autres parties de la ville, les retraités.
+    - Langues: français, néerlandais, anglais.
+- Organisateurs : mettre la langue parlée 
+- Filtre dans le résultat de recherches : 
+    - versions en anglais, français, néerlandais -> langue
+    - durée/date/disponibilité -> calendrier : pour réserver une/plusieurs places pour telle date.
+    - Nombre limite de gens : 3-4 max ?
+    - Prix (proposés par l'organisateur)
+    - Communauté (ex: marocaine)
+- Comment un organisateur pourrait proposer une formule ? 
+    - Formulaire de création d'un nouveau formule par les autres partenaires.
+        - Champs : Nom, prénom, nom de l'activité, nom de l'endroit/lieux, horaires, descriptif/sommaire, photos de l'endroit.
+    - Mercredi : 
+- Visiteurs : 
+    - Profil: nom, photo, 
+    - Formules qu'ils ont découverts
+    - Recherches (pour tout le monde)
+
+- Page d'accueil : 
+    - Navbar
+        - Pas encore de logo ; 
+        - Aktyv, ou autres noms à proposer ;
+        - Bar de recherche
+        - A propos
+        - organisateurs/activités (un autre carousel)
+        - contact
+    - Représenter Bruxelles à travers toute sa diversité (slogan) ; Voir Bruxelles à travers nos yeux ! ;
+    - Grande banière / carousel d'images (lieux, activités, emblématiques de la culture, illustrant la multiculturalité)
+    - Bar de navigation
+    - Slogan
+    - Descriptif : faire la connaissance des autres, éviter les préjugés, l'histoire, motivations et le but derrière ce projet = fil conducteur.
+        - Personalité de l'organisateur, de la culture, leurs qualités et diversité.
+    - Propositions de formules disponible aux visiteurs du site (pas encore inscrits) -> un autre carousel ?
+    - Formulaire de contact
+    - Footer
+        - Réseaux sociaux
+        - Autres moyens de communication
+
+Backend :
+- Rechercher Contenful
+
 ---
 
 ## Ressources
