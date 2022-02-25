@@ -134,3 +134,6 @@ Backend :
         - 50
     - https://neilpatel.com/blog/psychology-of-color-and-conversions/
     - https://www.crazyegg.com/blog/website-color-palettes/
+
+- Références design :
+    - https://dribbble.com/shots/11290351-Healthcare
