@@ -2,17 +2,17 @@
 Projet client 
 
 ## L'équipe
-Teodora Cozma
-Brigita Sabutyte
-Thomas Melchers
-Gizem Onur
+- Teodora Cozma
+- Brigita Sabutyte
+- Thomas Melchers
+- Gizem Onur
 
 ## Outils et ressources
-Trello board : https://trello.com/b/MJf55WmB/client-project
-VS Code : text editor
-Structure du site/information architecture : https://dbdiagram.io/d
-Wireframe mockup : Adobe XD
-Hi-FI prototype : Framer
+- Trello board : https://trello.com/b/MJf55WmB/client-project
+- VS Code : text editor
+- Structure du site/information architecture : https://dbdiagram.io/d
+- Wireframe mockup : Adobe XD
+- Hi-FI prototype : Framer
 
 ## Le projet
 
