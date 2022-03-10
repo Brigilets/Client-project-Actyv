@@ -1,24 +1,57 @@
-import logo from './logo.svg';
 import './App.css';
+// import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Navbar from './Navbar';
+
+const theme = createTheme({
+  // Custom color palette
+  palette: {
+    // Orange tones
+    primary: {
+      main: '#f87f49',
+      light: '#FC9918',
+      lightest: '#FC991833'
+      // lightest: '#33FC9918'
+      // Lightest at 20% opacity
+    },
+    // Purple tones
+    secondary: {
+      dark: '#370665',
+      main: '#6342AC',
+      light: '#6342AC33'
+      // light: '#336342AC'
+      // Light at 20% opacity
+    },
+    // Green tones
+    tertiary: {
+      main: '#30C9B0',
+      light: '#30C9B080',
+      // light: '#8030C9B0',
+      // Light at 50% opacity
+    }
+  },
+
+  // Custom typography
+  typography: {
+    headers: {
+      fontFamily: ['Caveat', 'cursive']
+    },
+    paragraphs: {
+      fontFamily: ['Raleway', 'sans-serif']
+    },
+  }
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Navbar/>
+        <header className="App-header">
+          
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
