@@ -2,6 +2,8 @@ import './App.css';
 // import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './Navbar';
+import {Routes,Route} from 'react-router-dom';
+import Home from './Home';
 
 const theme = createTheme({
   // Custom color palette
@@ -47,6 +49,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Navbar/>
+        <Home />
         <header className="App-header">
           
         </header>
