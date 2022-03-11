@@ -52,7 +52,7 @@ const App = () => {
       <div className="App">
         <Navbar/>
         <Home />
-        <Organiser/>
+    
         <header className="App-header">
           
         </header>
