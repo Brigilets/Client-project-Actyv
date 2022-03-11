@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './Navbar';
 import {Routes,Route} from 'react-router-dom';
 import Home from './Home';
+import ContactForm from './components/ContactForm';
 
 const theme = createTheme({
   // Custom color palette
@@ -55,6 +56,7 @@ const App = () => {
     
         <header className="App-header">
           <Organiser></Organiser>
+          <ContactForm></ContactForm>
         </header>
         </div>
     </ThemeProvider>
