@@ -49,12 +49,13 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
+      
+      <div className="App" data-testid="app">
         <Navbar/>
         <Home />
     
         <header className="App-header">
-          
+          <Organiser/>
         </header>
         </div>
     </ThemeProvider>

@@ -11,10 +11,10 @@ const Organiser = () =>{
     getOrganisers().then((response) => setOrganisers(response));
   });
   return (
-   <div>
+   <div data-testid="organiser" >
    {
      organisers.map((organiser, index) => 
-    <OrganiserCard key={index} organiser={organiser}/>
+    <OrganiserCard data-testid="organiser-card" key={index} organiser={organiser}/>
     )
    }</div>
   )

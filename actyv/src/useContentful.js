@@ -13,6 +13,7 @@ const entries = await client.getEntries({
     select: "fields",
 })
 
+
 const sanitizedEntries = entries.items.map((item) => {
     const avatar = item.fields.photoDeProfil.fields
     return{
@@ -26,6 +27,7 @@ return sanitizedEntries;
 console.log(`Error fetching authors: ${error}`)
 }
 }
+
 return {getOrganisers}
 }
 export default useContentful
