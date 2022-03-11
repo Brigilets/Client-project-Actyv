@@ -18,8 +18,8 @@ const theme = createTheme({
     },
     // Purple tones
     secondary: {
-      dark: '#370665',
-      main: '#6342AC',
+      main: '#370665',
+      lighter: '#6342AC',
       light: '#6342AC33'
       // light: '#336342AC'
       // Light at 20% opacity

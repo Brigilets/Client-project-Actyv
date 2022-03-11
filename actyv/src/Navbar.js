@@ -11,9 +11,10 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import logo from './img/actyv_logo_3.png'
 
-const pages = ['Formules et activités proposées', 'A propos', 'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Formules et activités proposées', 'À propos', 'Contact'];
+// const settings = ['Formules et activités proposées', 'A propos', 'Contact'];
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -35,40 +36,54 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar position="static">
-          <Container maxWidth="xl">
-            <Toolbar disableGutters>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-              >
-                LOGO
-              </Typography>
-    
-              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+        <AppBar 
+          position="static" 
+          style={{
+            backgroundColor: 'white',
+            boxShadow: "0px 0px 0px 0px",
+            }}>
+          <Container 
+            maxWidth="xl"
+            style={{
+              display:'flex',
+              justifyContent: "space-between",
+            }}
+          >
+            <Toolbar
+            sx={{
+              display:'flex',
+              justifyContent: "space-between",
+            }}
+            >
+              {/* Custom logo */}
+              <img src={logo} width="50" alt='logo-3'/>
+
+              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, flexDirection: 'flex-end', justifyContent:'space-between' }}>
+
+                {/* Mobile menu button */}
                 <IconButton
                   size="large"
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
                   onClick={handleOpenNavMenu}
-                  color="inherit"
+                  color="secondary"
                 >
                   <MenuIcon />
                 </IconButton>
+
+                {/* Mobile menu dropdown */}
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'left',
+                    horizontal: 'right',
                   }}
                   keepMounted
                   transformOrigin={{
                     vertical: 'top',
-                    horizontal: 'left',
+                    horizontal: 'right',
                   }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
@@ -76,51 +91,54 @@ const Navbar = () => {
                     display: { xs: 'block', md: 'none' },
                   }}
                 >
+                  {/* Dropdown menu contents */}
                   {pages.map((page) => (
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
+                      <Typography textAlign="center" color="secondary">{page}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
               </Box>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-              >
-                LOGO
-              </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+              <Box sx={{ 
+                flexGrow: 1, 
+                display: { xs: 'none', md: 'flex' },
+                justifyContent: 'flex-end',
+                alignContent: 'flex-end',
+              }}>
+                {/* Expanded menu list (as buttons) */}
                 {pages.map((page) => (
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    sx={{ my: 2 }}
                   >
-                    {page}
+                    <Typography color='secondary' textTransform='none' >
+                      {page}
+                    </Typography>
                   </Button>
                 ))}
               </Box>
     
-              <Box sx={{ flexGrow: 0 }}>
+              {/* <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
+                    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                   </IconButton>
                 </Tooltip>
+
                 <Menu
                   sx={{ mt: '45px' }}
                   id="menu-appbar"
                   anchorEl={anchorElUser}
                   anchorOrigin={{
                     vertical: 'top',
-                    horizontal: 'right',
+                    horizontal: 'left',
                   }}
                   keepMounted
                   transformOrigin={{
                     vertical: 'top',
-                    horizontal: 'right',
+                    horizontal: 'left',
                   }}
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
@@ -131,7 +149,8 @@ const Navbar = () => {
                     </MenuItem>
                   ))}
                 </Menu>
-              </Box>
+              </Box> */}
+              
             </Toolbar>
           </Container>
         </AppBar>
