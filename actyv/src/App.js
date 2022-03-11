@@ -54,7 +54,7 @@ const App = () => {
         <Home />
     
         <header className="App-header">
-          
+          <Organiser></Organiser>
         </header>
         </div>
     </ThemeProvider>
