@@ -4,7 +4,7 @@ Projet client
 ## L'équipe
 - Teodora Cozma
 - Brigita Sabutyte
-- Thomas 
+- Thomas Melchers
 - Gizem Onur
 
 ## Outils et ressources
