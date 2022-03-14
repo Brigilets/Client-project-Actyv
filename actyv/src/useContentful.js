@@ -28,6 +28,26 @@ console.log(`Error fetching authors: ${error}`)
 }
 }
 
-return {getOrganisers}
+const getActivities = async () =>{
+    try{
+        const entries = await client.getEntries({
+            content_type: "activites",
+            select: "fields",
+        })
+    
+   const sanitizedEntries = entries.items.map((item)=>{
+         const image = item.fields.photoPrincipal.fields
+            return {
+            ...item.fields,
+         image
+           }
+        })
+       return sanitizedEntries;
+    }catch(error){
+console.log(`Error fetching activities: ${error}`)
+    }
+}
+
+return {getOrganisers, getActivities}
 }
 export default useContentful
