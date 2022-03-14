@@ -1,3 +1,5 @@
+import React from 'react'
+import Organiser from './components/Organiser';
 import './App.css';
 // import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -49,7 +51,7 @@ const theme = createTheme({
   }
 })
 
-function App() {
+const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
@@ -58,7 +60,7 @@ function App() {
         </header>
         
         <Home />
-
+        <Organiser></Organiser>
         <footer>
           <Footer/>
         </footer>
