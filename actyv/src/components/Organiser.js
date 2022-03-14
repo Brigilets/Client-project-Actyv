@@ -9,7 +9,9 @@ const Organiser = () =>{
 
   useEffect(() => {
     getOrganisers().then((response) => setOrganisers(response));
+   // console.log(organisers)
   });
+
   return (
    <div data-testid="organiser" >
    {
