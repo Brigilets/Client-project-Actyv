@@ -4,6 +4,7 @@ import './App.css';
 // import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import {Routes,Route} from 'react-router-dom';
 import Home from './Home';
 
@@ -37,12 +38,16 @@ const theme = createTheme({
 
   // Custom typography
   typography: {
-    headers: {
-      fontFamily: ['Caveat', 'cursive']
-    },
-    paragraphs: {
-      fontFamily: ['Raleway', 'sans-serif']
-    },
+    fontFamily: [
+      "Caveat", "Raleway"
+    ].join(",")
+
+    // headers: {
+    //   fontFamily: ['Caveat', 'cursive']
+    // },
+    // paragraphs: {
+    //   fontFamily: ['Raleway', 'sans-serif']
+    // },
   }
 })
 
@@ -50,13 +55,16 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Navbar/>
-        <Home />
-    
         <header className="App-header">
-          <Organiser></Organiser>
+          <Navbar/>
         </header>
-        </div>
+        
+        <Home />
+        <Organiser></Organiser>
+        <footer>
+          <Footer/>
+        </footer>
+      </div>
     </ThemeProvider>
   );
 }
