@@ -54,14 +54,16 @@ const theme = createTheme({
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <header className="App-header">
-          <Navbar/>
+
+<ThemeProvider>
+    <div className="App" >
+    <header className="App-header">
+    <Navbar/>
         </header>
         <Home />
         <Organiser></Organiser>
         <Activity/>
+ 
         <footer>
           <Footer/>
         </footer>
