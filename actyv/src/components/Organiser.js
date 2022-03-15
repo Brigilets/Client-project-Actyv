@@ -9,12 +9,14 @@ const Organiser = () =>{
 
   useEffect(() => {
     getOrganisers().then((response) => setOrganisers(response));
+   // console.log(organisers)
   });
+
   return (
-   <div>
+   <div data-testid="organiser" >
    {
      organisers.map((organiser, index) => 
-    <OrganiserCard key={index} organiser={organiser}/>
+    <OrganiserCard data-testid="organiser-card" key={index} organiser={organiser}/>
     )
    }</div>
   )
