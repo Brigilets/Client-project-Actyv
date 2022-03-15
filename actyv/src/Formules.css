@@ -1,3 +1,13 @@
 .box-formules  {
     padding:5rem 5rem 5rem 5rem;
 }
+
+.title-formules {
+    padding-bottom: 2rem;
+    text-align: left;
+  font-weight: 700;
+  font-family: "Caveat", serif;
+  font-size: 44px;
+}
+
+
