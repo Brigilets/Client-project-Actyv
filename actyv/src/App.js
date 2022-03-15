@@ -54,7 +54,6 @@ const App = () => {
       <div className="App" data-testid="app">
         <Navbar/>
         <Home />
-    
         <header className="App-header">
           <Organiser/>
         <Activity/>
