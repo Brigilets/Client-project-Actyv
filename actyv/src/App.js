@@ -8,6 +8,7 @@ import Footer from './Footer';
 import {Routes,Route} from 'react-router-dom';
 import Home from './Home';
 import Activity from './components/Activity';
+import ContactForm from './components/ContactForm';
 
 const theme = createTheme({
   // Custom color palette
