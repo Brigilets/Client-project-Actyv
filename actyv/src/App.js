@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './Navbar';
 import {Routes,Route} from 'react-router-dom';
 import Home from './Home';
+import Activity from './components/Activity';
 
 const theme = createTheme({
   // Custom color palette
@@ -56,6 +57,7 @@ const App = () => {
     
         <header className="App-header">
           <Organiser/>
+        <Activity/>
         </header>
         </div>
     </ThemeProvider>

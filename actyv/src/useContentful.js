@@ -6,6 +6,7 @@ const client = createClient({
     accessToken: "bqsOzsXjHI-9FQ31LQHxAXbmubsukBUho7OysKtIHr8",
     host: ""
 })
+
 const getOrganisers = async() =>{
 try{
 const entries = await client.getEntries({
@@ -21,16 +22,16 @@ const sanitizedEntries = entries.items.map((item) => {
         avatar
     }
 })
-console.log('fetched data from contentful',sanitizedEntries)
+//console.log('fetched organiser data from contentful',sanitizedEntries)
 return sanitizedEntries;
 } catch(error){
 console.log(`Error fetching authors: ${error}`)
 }
 }
 
-const getActivities = async () =>{
+/*const getActivites =async () =>{
     try{
-        const entries = await client.getEntries({
+        const entries =await client.getEntries({
             content_type: "activites",
             select: "fields",
         })
@@ -39,15 +40,16 @@ const getActivities = async () =>{
          const image = item.fields.photoPrincipal.fields
             return {
             ...item.fields,
-         image
+            image
            }
         })
+        console.log('fetched activities data from contentful',sanitizedEntries)
        return sanitizedEntries;
-    }catch(error){
+    } catch(error){
 console.log(`Error fetching activities: ${error}`)
     }
-}
+}*/
 
-return {getOrganisers, getActivities}
+return {getOrganisers}
 }
 export default useContentful
