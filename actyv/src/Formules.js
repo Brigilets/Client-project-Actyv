@@ -1,5 +1,6 @@
 import * as React from 'react';
-import './Formules.css'
+import './Formules.css';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,11 +9,24 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box, Container, Grid } from '@mui/material';
 
+
+
+
 export default function ImgMediaCard() {
     return (
 
 
-        <Box className="box-formules" sx={{ flexGrow: 1 }}>
+        <Box 
+        className="box-formules" sx={{ flexGrow: 1 }} >
+            <Typography className="title-formules"
+             color="primary"
+             fontFamily="Caveat"
+             fontWeight={700}
+             fontSize={40}
+             textAlign="start"
+             >
+                Formules / Activités proposées
+            </Typography>
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={12} md={6} lg={3}>
                     <Card>
@@ -22,16 +36,14 @@ export default function ImgMediaCard() {
                             image="https://images.unsplash.com/photo-1543906965-f9520aa2ed8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="green iguana"
                         />
-                        <CardContent>
+                        <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}>
                             <Typography gutterBottom variant="h5" component="div">
                                 Nom du formule
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography >
                             Descriptif
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                        </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={3}>
@@ -42,16 +54,16 @@ export default function ImgMediaCard() {
                             image="https://images.unsplash.com/photo-1543906965-f9520aa2ed8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="green iguana"
                         />
-                        <CardContent>
+                        <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}
+                        >
                             <Typography gutterBottom variant="h5" component="div">
                                 Nom du formule
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography >
                                 Descriptif
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                        </CardActions>
+                    
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={3}>
@@ -62,17 +74,14 @@ export default function ImgMediaCard() {
                             image="https://images.unsplash.com/photo-1543906965-f9520aa2ed8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="green iguana"
                         />
-                        <CardContent>
+                        <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}>
                             <Typography gutterBottom variant="h5" component="div">
                                 Nom du formule
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography>
                             Descriptif
                             </Typography>
                         </CardContent>
-                        <CardActions>
-         
-                        </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={3}>
@@ -83,19 +92,19 @@ export default function ImgMediaCard() {
                             image="https://images.unsplash.com/photo-1543906965-f9520aa2ed8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="green iguana"
                         />
-                        <CardContent>
+                        <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}>
                             <Typography gutterBottom variant="h5" component="div">
                                 Nom du formule
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography>
                             Descriptif
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                        </CardActions>
                     </Card>
                 </Grid>
             </Grid>
+            <Button sx={{ paddingTop:"3rem", float:"left"}}
+            color="tertiary" > Découvrir plus </Button>
         </Box>
 
     );
