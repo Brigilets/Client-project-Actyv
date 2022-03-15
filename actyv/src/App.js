@@ -52,12 +52,13 @@ const App = () => {
     <ThemeProvider theme={theme}>
       
       <div className="App" data-testid="app">
-        <Navbar/>
-        <Home />
         <header className="App-header">
-          <Organiser/>
-        <Activity/>
+        <Navbar/>
         </header>
+        <Home />
+        <Organiser/>
+        <Activity/>
+        
         </div>
     </ThemeProvider>
   );
