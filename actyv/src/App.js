@@ -56,7 +56,7 @@ const theme = createTheme({
 const App = () => {
   return (
 
-<ThemeProvider>
+<ThemeProvider theme={theme}>
     <div className="App" >
     <header className="App-header">
     <Navbar/>
