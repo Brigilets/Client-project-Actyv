@@ -8,6 +8,7 @@ import Footer from './Footer';
 import {Routes,Route} from 'react-router-dom';
 import Home from './Home';
 import Activity from './components/Activity';
+import ContactForm from './components/ContactForm';
 
 const theme = createTheme({
   // Custom color palette
@@ -55,15 +56,15 @@ const theme = createTheme({
 const App = () => {
   return (
 
-<ThemeProvider>
+<ThemeProvider theme={theme}>
     <div className="App" >
     <header className="App-header">
     <Navbar/>
         </header>
-        
         <Home />
         <Organiser></Organiser>
-    <Activity/>
+        <Activity/>
+ 
         <footer>
           <Footer/>
         </footer>
@@ -71,5 +72,4 @@ const App = () => {
     </ThemeProvider>
   );
 }
-
 export default App;

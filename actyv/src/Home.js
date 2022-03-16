@@ -3,7 +3,7 @@ import Formules from './Formules';
 import logo from './img/actyv.logo.1.png'
 import Searchbar from './Searchbar';
 import AboutMe from "./AboutMe";
-import Swipe from './Swipe';
+//import Swipe from './Swipe';
 
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
   
      
         <Searchbar />
-        <Swipe />
+   
         <Formules />
         <AboutMe />
     </div>
