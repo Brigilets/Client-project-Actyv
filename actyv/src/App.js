@@ -1,14 +1,14 @@
 import React from 'react'
-import Organiser from './components/Organiser';
 import './App.css';
-// import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import {Routes,Route} from 'react-router-dom';
-import Home from './Home';
-import Activity from './components/Activity';
-import ContactForm from './components/ContactForm';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Inscription from './pages/Inscription';
+import Connexion from './pages/Connexion';
+// import Organiser from './components/Organiser';
+
 
 const theme = createTheme({
   // Custom color palette
@@ -55,21 +55,31 @@ const theme = createTheme({
 
 const App = () => {
   return (
-
-<ThemeProvider theme={theme}>
-    <div className="App" >
-    <header className="App-header">
-    <Navbar/>
+    <ThemeProvider theme={theme}>
+      <Router>
+      <div className="App">
+        <header className="App-header">
+          <Navbar/>
         </header>
-        <Home />
-        <Organiser></Organiser>
-        <Activity/>
- 
+
+          <Routes>
+            <Route exact path="/" element={ <Home /> } />
+            <Route path="/inscription" element={ <Inscription /> } />
+            <Route path="/connexion" element={ <Connexion /> } />
+          </Routes>
+
+        {/* <Organiser></Organiser> */}
         <footer>
           <Footer/>
         </footer>
       </div>
+      </Router>
     </ThemeProvider>
   );
 }
+
 export default App;
+
+
+{/* <Organiser></Organiser> */}
+{/* <Activity/> */}
