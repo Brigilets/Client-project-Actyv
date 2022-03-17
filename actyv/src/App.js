@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Inscription from './pages/Inscription';
 import Connexion from './pages/Connexion';
 // import Organiser from './components/Organiser';
-
+import Reservation from './components/reservationForm';
 
 const theme = createTheme({
   // Custom color palette
@@ -67,7 +67,7 @@ const App = () => {
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
           </Routes>
-
+<Reservation/>
         {/* <Organiser></Organiser> */}
         <footer>
           <Footer/>
