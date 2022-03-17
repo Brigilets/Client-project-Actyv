@@ -2,8 +2,8 @@ import { createClient } from "contentful"
 
 const useActivities = () => {
 const client = createClient({
-    space: "gj7ykyejvpw4",
-    accessToken: "bqsOzsXjHI-9FQ31LQHxAXbmubsukBUho7OysKtIHr8",
+    space: process.env.REACT_APP_CONTENTFUL_SPACE,
+    accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN,
     host: ""
 })
 const getActivites = async () =>{

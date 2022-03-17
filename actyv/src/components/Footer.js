@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import logo from './img/actyv.logo.2.png'
+import logo from '../img/actyv.logo.2.png'
 
 const Footer = () => {
     return ( 

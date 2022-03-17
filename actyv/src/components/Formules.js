@@ -1,28 +1,22 @@
 import * as React from 'react';
 import './Formules.css';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Box, Container, Grid } from '@mui/material';
-
-
+import { Box, Grid } from '@mui/material';
 
 
 export default function ImgMediaCard() {
     return (
-
-
         <Box 
         className="box-formules" sx={{ flexGrow: 1 }} >
             <Typography className="title-formules"
              color="primary"
              fontFamily="Caveat"
              fontWeight={700}
-             fontSize={40}
+             fontSize="44px"
              textAlign="start"
              >
                 Formules / Activités proposées
@@ -37,10 +31,10 @@ export default function ImgMediaCard() {
                             alt="green iguana"
                         />
                         <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h5" component="div" className='raleway-typography' fontFamily="Raleway">
                                 Nom du formule
                             </Typography>
-                            <Typography >
+                            <Typography  fontFamily="Raleway">
                             Descriptif
                             </Typography>
                         </CardContent>
@@ -56,10 +50,10 @@ export default function ImgMediaCard() {
                         />
                         <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}
                         >
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h5" component="div"  fontFamily="Raleway">
                                 Nom du formule
                             </Typography>
-                            <Typography >
+                            <Typography fontFamily="Raleway" >
                                 Descriptif
                             </Typography>
                         </CardContent>
@@ -75,10 +69,10 @@ export default function ImgMediaCard() {
                             alt="green iguana"
                         />
                         <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h5" component="div"  fontFamily="Raleway">
                                 Nom du formule
                             </Typography>
-                            <Typography>
+                            <Typography  fontFamily="Raleway">
                             Descriptif
                             </Typography>
                         </CardContent>
@@ -93,10 +87,10 @@ export default function ImgMediaCard() {
                             alt="green iguana"
                         />
                         <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h5" component="div"  fontFamily="Raleway">
                                 Nom du formule
                             </Typography>
-                            <Typography>
+                            <Typography  fontFamily="Raleway">
                             Descriptif
                             </Typography>
                         </CardContent>

@@ -1,0 +1,13 @@
+.forms {
+    display: grid;
+    grid-gap: 0.8em;
+}
+
+.form {
+    opacity: 0.5;
+    margin: 0.5em;
+}
+.form:hover {
+    opacity: 1;
+    cursor: pointer;
+}
