@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import logo from '../img/actyv.logo.2.png'
+import logo from '../img/actyv.logo.2.png';
 
 const Footer = () => {
     return ( 
@@ -21,7 +21,7 @@ const Footer = () => {
               {/* Custom logo */}
               <img src={logo} width="65" height="65" alt='logo-2'/>
 
-              <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' }, justifycontent:'flex-end' }}>
+              <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' }, justifyContent:'flex-end' }}>
 
               </Box>
 
@@ -32,10 +32,9 @@ const Footer = () => {
                 alignContent: 'flex-end',
               }}>
                 <Typography color='white' textTransform='none' fontSize='12px' fontFamily='Raleway' fontWeight='bold'>
-                      <p>Copyright &#169; 2022 Actyv.be</p>
+                    Copyright &#169; 2022 Actyv.be
                 </Typography>
               </Box>
-
         </Container>
     );
 }

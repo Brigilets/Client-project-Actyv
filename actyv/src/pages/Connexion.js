@@ -7,6 +7,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './Connexion.css';
 import { useState } from "react";
+import Link from '@mui/material/Link';
+
 
 const Inscription = () => {
     
@@ -52,10 +54,10 @@ const Inscription = () => {
                         />
                     </Grid>
                     <Grid item sm={12} md={7} align='left' padding='0.5em'>
-                        <Typography color='primary' fontSize='40px' margin="0em 0em 0.5em">Je suis...</Typography>
+                        <Typography color='primary' fontSize='40px' margin="0em 0em 0.5em" fontFamily="Caveat">Je suis...</Typography>
 
                         {/* Forms container */}
-                        <Grid container className="forms">
+                        <Grid container className="forms" style={{ display: "flex", justifyContent: "center", width: "100%" }}>
 
                             {/* Organisateur */}
                             <Grid item sm={12} md={5} className="form"
@@ -70,7 +72,7 @@ const Inscription = () => {
                                     style = {{ width: '100%', boxSizing: 'border-box' }}
                                 >
                                     <FormLabel>
-                                        <Typography color='secondary' fontWeight="bold" fontSize="24px">
+                                        <Typography color='secondary' fontWeight="bold" fontSize="24px" fontFamily="Caveat">
                                             Organisateur/trice
                                         </Typography>
                                     </FormLabel>
@@ -100,8 +102,8 @@ const Inscription = () => {
                                   
                                     <Button type='submit' 
                                     onClick={() => console.log('Clicked !')} variant='contained' color='secondary' 
-                                    sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkButton={true}>
-                                    <Typography textTransform='none'>
+                                    sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkbutton={true}>
+                                    <Typography textTransform='none' fontFamily="Caveat">
                                         Se connecter
                                     </Typography>
                                     </Button>
@@ -121,7 +123,7 @@ const Inscription = () => {
                                     style = {{ width: '100%', boxSizing: 'border-box' }}
                                 >
                                     <FormLabel>
-                                        <Typography color='primary' fontWeight="bold" fontSize="24px">
+                                        <Typography color='primary' fontWeight="bold" fontSize="24px" fontFamily="Caveat">
                                             Visiteur/euse
                                         </Typography>
                                     </FormLabel>
@@ -151,8 +153,8 @@ const Inscription = () => {
                                    
                                     <Button type='submit' 
                                     onClick={() => console.log('Clicked !')} variant='contained' color='primary' 
-                                    sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkButton={true}>
-                                        <Typography textTransform='none' color='secondary'>
+                                    sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkbutton={true}>
+                                        <Typography textTransform='none' color='secondary' fontFamily="Caveat">
                                             Se connecter
                                         </Typography>
                                     </Button>
@@ -160,6 +162,11 @@ const Inscription = () => {
                             </Grid>
                         </Grid>
                     </Grid>
+                    <Link href="/Inscription">
+                        <Button sx={{ paddingTop:"3rem", float:"left", fontFamily:"Caveat", fontSize:"20px", marginBottom:"2em"}} > 
+                            <Typography color="#30C9B0" fontFamily="Caveat">Pas encore inscrit ? Inscrivez-vous.</Typography> 
+                        </Button>
+                    </Link>
                 </Grid>
             </Container>
         </div>
