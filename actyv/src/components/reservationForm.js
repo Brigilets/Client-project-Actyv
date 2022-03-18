@@ -134,6 +134,18 @@ const Reservation = () => {
                 </Grid>
 </Grid>
 
+<Grid container justifyContent="flex-start" mt={5} ml={4}>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  type={"submit"}
+                  sx={{ color: "white" }}
+                >
+                  Envoyez
+                </Button>
+              </Grid>
+            </Grid>
+         
 </Box>
 </Container>
           </div>
