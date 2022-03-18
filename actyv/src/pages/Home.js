@@ -11,7 +11,7 @@ import Swipe from '../components/Swipe';
 function Home() {
   return (
     <div>
-        <img src={logo} width="330" height="340" alt='logo-2'/>
+        <img src={logo} width="340" height="340" alt='logo-2' />
         <Searchbar />
         <Swipe />
         <Formules />
