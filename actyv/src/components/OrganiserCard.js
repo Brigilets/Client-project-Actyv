@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Grid, Button } from "@mui/material";
-import { fontStyle } from "@mui/system";
 
 const OrganiserCard = ({ organiser }) => {
   return (
@@ -38,16 +37,18 @@ const OrganiserCard = ({ organiser }) => {
               {organiser.prnom}{' '}
               {organiser.name}
             </Typography>
+
+            <Typography sx={{color: 'secondary.main', textAlign: 'left'}}>{organiser.role}</Typography>
             <Typography
               color="secondary"
-              sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 500 }}
+              sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
             >
               Intérêts:
             </Typography>
             <Typography
               color="secondary"
               mb={2}
-              sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 500 }}
+              sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
             >
               Langue(s):
             </Typography>
