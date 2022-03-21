@@ -13,12 +13,11 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 const Reservation = () => {
+
   
-  const form = useRef();
-  console.log(form)
 
   const [date, setDate] = useState([]);
-
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -57,7 +56,7 @@ const Reservation = () => {
               <TextField
                   variant="filled"
                   id="nom"
-                  name="nom"
+                  name="user_name"
                   required
                   label="Votre nom"
                   type="text"
@@ -134,7 +133,7 @@ const Reservation = () => {
                 </Grid>
 </Grid>
 
-<Grid container justifyContent="flex-start" mt={5} ml={4}>
+<Grid container justifyContent="center" mt={5} ml={4}>
               <Grid item>
                 <Button
                   variant="contained"
