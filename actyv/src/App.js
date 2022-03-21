@@ -4,12 +4,16 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Pages
 import Home from './pages/Home';
 import Inscription from './pages/Inscription';
 import Connexion from './pages/Connexion';
 import SearchResults from './pages/SearchResults';
-// import Organiser from './components/Organiser';
-import Reservation from './components/reservationForm';
+import Visiteur from './pages/Visiteur';
+
+// Components
+// import Reservation from './components/reservationForm';
 
 const theme = createTheme({
   // Custom color palette
@@ -68,9 +72,13 @@ const App = () => {
             <Route path="/searchresults" element={ <SearchResults /> } />
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
+            <Route path="/visiteur" element={ <Visiteur /> } />
           </Routes>
-<Reservation/>
-        {/* <Organiser></Organiser> */}
+
+          {/* A inclure dans leurs pages respectives */}
+            {/* <Reservation/> */}
+            {/* </Organiser> */}
+            {/* <Activity/> */}
         <footer>
           <Footer/>
         </footer>
@@ -81,7 +89,3 @@ const App = () => {
 }
 
 export default App;
-
-
-{/* <Organiser></Organiser> */}
-{/* <Activity/> */}
