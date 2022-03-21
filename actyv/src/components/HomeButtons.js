@@ -31,12 +31,12 @@ const HomeButtons = () => {
             <br /> <br />
             <Box>
                 <Button variant='contained' color='secondary' 
-                sx={{borderRadius:'20px'}} linkButton={true}>
+                sx={{borderRadius:'20px'}} >
                     <Link href='/inscription' style={{
                         textDecoration: 'none',
                         color: 'white'
                     }}>
-                        <Typography textTransform='none'>
+                        <Typography textTransform='none' fontFamily="Caveat" fontSize="20px">
                             S'inscrire
                         </Typography>
                     </Link>
@@ -49,7 +49,7 @@ const HomeButtons = () => {
                         textDecoration: 'none',
                         color: '#370665',
                     }}>
-                        <Typography textTransform='none'>
+                        <Typography textTransform='none' fontFamily="Caveat" fontSize="20px">
                             Se connecter
                         </Typography>
                     </Link>

@@ -42,7 +42,7 @@ const theme = createTheme({
   // Custom typography
   typography: {
     fontFamily: [
-      "Caveat", "Raleway"
+      "Raleway", "Caveat"
     ].join(",")
 
     // headers: {

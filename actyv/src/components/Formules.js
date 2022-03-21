@@ -15,7 +15,7 @@ export default function ImgMediaCard() {
             <Typography className="title-formules"
              color="primary"
              fontFamily="Caveat"
-             fontWeight={700}
+             fontWeight={600}
              fontSize="44px"
              textAlign="start"
              >
@@ -97,8 +97,8 @@ export default function ImgMediaCard() {
                     </Card>
                 </Grid>
             </Grid>
-            <Button sx={{ paddingTop:"3rem", float:"left"}}
-            color="tertiary" > Découvrir plus </Button>
+            <Button sx={{ paddingTop:"3rem", float:"left", fontFamily:"Caveat", fontSize:"20px", marginBottom:"2em"}}
+            color="tertiary"> Découvrir plus </Button>
         </Box>
 
     );
