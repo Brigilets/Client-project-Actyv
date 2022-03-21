@@ -10,6 +10,7 @@ import Connexion from './pages/Connexion';
 import SearchResults from './pages/SearchResults';
 // import Organiser from './components/Organiser';
 import Reservation from './components/reservationForm';
+import Organisers from './pages/Organisers';
 
 const theme = createTheme({
   // Custom color palette
@@ -68,6 +69,7 @@ const App = () => {
             <Route path="/searchresults" element={ <SearchResults /> } />
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
+            <Route path='/organiser' element={ <Organisers />} />
           </Routes>
 <Reservation/>
         {/* <Organiser></Organiser> */}
