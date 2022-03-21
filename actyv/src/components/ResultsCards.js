@@ -8,18 +8,18 @@ import Typography from '@mui/material/Typography';
 import { Box, Grid } from '@mui/material';
 
 
-export default function ImgMediaCard() {
+export default function ResultCards() {
     return (
         <Box 
         className="box-formules" sx={{ flexGrow: 1 }} >
             <Typography className="title-formules"
              color="primary"
              fontFamily="Caveat"
-             fontWeight={600}
+             fontWeight={700}
              fontSize="44px"
              textAlign="start"
              >
-                Formules / Activités proposées
+               Résultats selon vos recherches
             </Typography>
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={12} md={6} lg={3}>
@@ -97,8 +97,8 @@ export default function ImgMediaCard() {
                     </Card>
                 </Grid>
             </Grid>
-            <Button sx={{ paddingTop:"3rem", float:"left", fontFamily:"Caveat", fontSize:"20px", marginBottom:"2em"}}
-            color="tertiary"> Découvrir plus </Button>
+            <Button sx={{ paddingTop:"3rem", float:"left"}}
+            color="tertiary" > Découvrir plus </Button>
         </Box>
 
     );

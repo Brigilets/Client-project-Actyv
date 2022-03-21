@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Inscription from './pages/Inscription';
 import Connexion from './pages/Connexion';
+import SearchResults from './pages/SearchResults';
 // import Organiser from './components/Organiser';
 import Reservation from './components/reservationForm';
 
@@ -41,7 +42,7 @@ const theme = createTheme({
   // Custom typography
   typography: {
     fontFamily: [
-      "Caveat", "Raleway"
+      "Raleway", "Caveat"
     ].join(",")
 
     // headers: {
@@ -64,6 +65,7 @@ const App = () => {
 
           <Routes>
             <Route exact path="/" element={ <Home /> } />
+            <Route path="/searchresults" element={ <SearchResults /> } />
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
           </Routes>

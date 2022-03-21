@@ -9,7 +9,7 @@ export default function BasicGrid() {
     return (
         <Box sx={{backgroundColor:"rgba(252, 153, 24, 0.2)", padding:"3rem 5rem"}} >
             <Grid container spacing={3}>
-                <Grid item lg={3} md={3} sm={6} xs={12} >
+                <Grid item lg={4} md={4} sm={6} xs={12} >
                     <Card>
                         <CardMedia
                             component="img"

@@ -69,7 +69,7 @@ export default function Searchbar() {
         }}
       >
         <Box>
-            <Typography color='secondary' textTransform='none' fontSize='18px' fontFamily='Raleway' fontStyle='italic'>
+            <Typography color='secondary' textTransform='none' fontSize='18px' fontStyle='italic'>
                 {slogan}
             </Typography>
         </Box>
@@ -89,8 +89,11 @@ export default function Searchbar() {
                     <SearchIcon />
                     </SearchIconWrapper>
                     <StyledInputBase
+                    sx={{ width:"25em" }}
                     placeholder="Découvrez les activités culturelles..."
-                    inputProps={{ 'aria-label': 'search' }}
+                    inputProps={{ 'aria-label': 'search', width:"20em"  }}
+                    type="search"
+                    fullWidth
                     />
                 </Search>
             {/* </Toolbar> */}
