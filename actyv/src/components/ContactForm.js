@@ -62,7 +62,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Container
+    <Container id="contact"
       style = {{
         padding:'0',
         maxWidth: '100%',

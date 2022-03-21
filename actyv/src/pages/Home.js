@@ -6,6 +6,7 @@ import HomeButtons from '../components/HomeButtons';
 import AboutMe from '../components/AboutMe';
 import ContactForm from '../components/ContactForm';
 import Swipe from '../components/Swipe';
+import {Link} from 'react-scroll'
 
 
 function Home() {
@@ -22,4 +23,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home 
