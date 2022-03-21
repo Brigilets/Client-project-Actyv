@@ -9,7 +9,7 @@ import Inscription from './pages/Inscription';
 import Connexion from './pages/Connexion';
 import SearchResults from './pages/SearchResults';
 // import Organiser from './components/Organiser';
-import Reservation from './components/reservationForm';
+import Reservation from './components/ReservationForm';
 import Organisers from './pages/Organisers';
 
 const theme = createTheme({
