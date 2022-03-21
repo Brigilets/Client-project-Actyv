@@ -1,10 +1,12 @@
-import React from 'react'
-import { Box, Grid, Typography } from '@mui/material';
+import React, { useRef, useState } from "react";
+import { Box, Grid, TextField, Typography } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-
+import DatePicker from '@mui/lab/DatePicker';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 
 function Filters() {
@@ -15,13 +17,17 @@ function Filters() {
         setAge(event.target.value);
     };
 
-  
+    const [date, setDate] = useState([]);
+  const form = useRef();
+
+
+
 
     return (
 
 
         <Box
-        padding="4rem ">
+            padding="4rem ">
             <Typography
                 color="primary"
                 fontFamily="Caveat"
@@ -29,8 +35,8 @@ function Filters() {
                 fontSize="44px"
                 textAlign="start"
                 paddingBottom="2rem"
-             
-                >
+
+            >
                 Filtrer  vos recherches
             </Typography>
 
@@ -55,22 +61,19 @@ function Filters() {
 
                 </Grid>
                 <Grid item xs={12} sm={12} md={2} lg={2}>
-
-                    <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label">Durée/Date</InputLabel>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
-                        >
-                            <MenuItem value={10}>Français</MenuItem>
-                            <MenuItem value={20}>Nerderlands</MenuItem>
-                            <MenuItem value={30}>English</MenuItem>
-                        </Select>
+                <FormControl fullWidth >
+                    <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
+                        <DatePicker
+                            label="Selectionez la date: "
+                            value={date}
+                            
+                            onChange={(date) => {
+                                setDate(date);
+                            }}
+                            renderInput={(params) => <TextField {...params} />}
+                        />
+                    </LocalizationProvider>
                     </FormControl>
-
 
                 </Grid>
 

@@ -10,7 +10,7 @@ import { Box, Grid } from '@mui/material';
 
 export default function ImgMediaCard() {
     return (
-        <Box 
+        <Box id="formules"
         className="box-formules" sx={{ flexGrow: 1 }} >
             <Typography className="title-formules"
              color="primary"
