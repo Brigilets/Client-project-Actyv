@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    
     "@emailjs/browser": "^3.4.0",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
@@ -22,6 +21,8 @@
     "react-horizontal-scrolling-menu": "^2.7.1",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.6",
+    "react-scroll-to-top": "^1.0.8",
     "react-swipeable-views": "^0.14.0",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4"

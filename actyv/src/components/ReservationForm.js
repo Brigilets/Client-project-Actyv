@@ -7,6 +7,10 @@ import {
   TextField,
   Typography,
   Button,
+  FormControl,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
 } from "@mui/material";
 import DatePicker from '@mui/lab/DatePicker';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
@@ -25,7 +29,7 @@ const Reservation = () => {
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        process.env.REACT_APP_EMAILJS_RESERVATION_TEMPLATE_ID,
         form.current,
         process.env.REACT_APP_EMAILJS_USER_ID
       )
@@ -65,10 +69,11 @@ const Reservation = () => {
               ></TextField>
           </Grid>
       </Grid>
+
       <Grid
           container
           justifyContent="flex-start"
-          justifyItems="space between"
+          
           mt={3}
           alignItems="center"
       >
@@ -87,18 +92,18 @@ const Reservation = () => {
                       sx={{ borderRadius: "20%" }}
                   ></TextField>
               </Grid>
-          </Grid>
-<Grid container
-       justifyContent="space-between" 
-       mt={3}>
-          <Grid item 
-          justifyContent="flex-start"
+              </Grid>
+<Grid container mt={2} justifyContent="center">
+          <Grid item
            xs={3}
-            mr={3}>
-                <Grid container>
+            style={{
+              display: 'flex',
+              flexDirection: 'row'
+            }}>
+                <Grid container >
               <Typography color="secondary"> Selectionez la date: </Typography>
          </Grid>
-         <Grid mr={2}>
+         <Grid item  xs={12} ml={2}>
          <LocalizationProvider dateAdapter={AdapterDateFns}>
   <DatePicker
     label="Selectionez la date: "
@@ -112,27 +117,70 @@ const Reservation = () => {
 </LocalizationProvider>
 </Grid>
 </Grid>
-<Grid container>
-<Grid item xs={3}  justify-content="flex-end" >
-                <Grid container xs={5}>
+
+<Grid item xs={3}    >
+                <Grid container mr={3}>
                   <Grid item xs={3} mr={2.5}>
-                    <Typography color="secondary"> Age: </Typography>
+                    <Typography  color="secondary"> Nombre de visiteurs: </Typography>
                   </Grid>
                   <Grid item xs={7}>
                     <TextField
                       type="number"
-                      id="age"
+                      id="number"
                       label={30}
-                      name="age"
+                      name="number"
                       required
                       fullWidth
                     ></TextField>
                   </Grid>
                 </Grid>
                 </Grid>
-                </Grid>
-</Grid>
+          
 
+<Grid item xs={12} sm={2} mb={1.5} >
+                <Grid container>
+                  <Grid item>
+                    <Typography color="secondary" fontWeight="bold"> Langue: </Typography>
+                  </Grid>
+                  <Grid item ml={3}
+                    sx={{
+                      '@media (max-width:600px)': { marginLeft: 2.7},
+                    }}
+                  >
+                    <FormControl>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="Français"
+                        name="language"
+                        color="secondary"
+                        required
+                      >
+                        <FormControlLabel
+                          value="Français"
+                          control={<Radio />}
+                          label={<Typography color="secondary" fontSize="0.8rem">Français</Typography>}
+                        />
+                        <FormControlLabel
+                          value="Néerlandais"
+                          control={<Radio />}
+                          label={<Typography color="secondary" fontSize="0.8rem">Néerlandais</Typography>}
+                        />
+                        <FormControlLabel
+                          value="Anglais"
+                          control={<Radio />}
+                          label={<Typography color="secondary" fontSize="0.8rem">Anglais</Typography>}
+                        />
+                        <FormControlLabel
+                          value="Autre"
+                          control={<Radio />}
+                          label={<Typography color="secondary" fontSize="0.8rem">Autre</Typography>}
+                        />
+                      </RadioGroup>
+                    </FormControl>
+                  </Grid>
+                </Grid>
+              </Grid>
+              </Grid>
 <Grid container justifyContent="center" mt={5} ml={4}>
               <Grid item>
                 <Button
