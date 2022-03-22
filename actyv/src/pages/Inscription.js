@@ -55,14 +55,14 @@ const Inscription = () => {
                 }}
             >
                 <Grid container>
-                    <Grid item sm={12} md={5} align='center' padding='0.5em'>
+                    <Grid item sm={12} md={4}>
                         <img src={picture} alt="départ" width="100%" height="100%"
                             style={{
                                 objectFit:"cover",
                             }} 
                         />
                     </Grid>
-                    <Grid item sm={12} md={7} align='left' padding='0.5em'>
+                    <Grid item sm={12} md={8} padding='0em 1em'>
                         <Typography color='primary' fontSize='40px' margin="0em 0em 0.5em" fontFamily="Caveat">Je me présente...</Typography>
 
                         {/* Forms container */}
@@ -134,7 +134,7 @@ const Inscription = () => {
                                     <Button type='submit' 
                                     onClick={() => console.log('Clicked !')} variant='contained' color='secondary' 
                                     sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkbutton={true}>
-                                    <Typography textTransform='none' fontFamily="Caveat">
+                                    <Typography textTransform='none' fontFamily="Caveat" fontSize="22px">
                                         S'inscrire
                                     </Typography>
                                     </Button>
@@ -207,7 +207,7 @@ const Inscription = () => {
                                     <Button type='submit' 
                                     onClick={() => console.log('Clicked !')} variant='contained' color='primary' 
                                     sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkbutton={true}>
-                                        <Typography textTransform='none' color='secondary' fontFamily="Caveat">
+                                        <Typography textTransform='none' color='secondary' fontFamily="Caveat" fontSize="22px">
                                             S'inscrire
                                         </Typography>
                                     </Button>

@@ -46,14 +46,14 @@ const Inscription = () => {
                 }}
             >
                 <Grid container>
-                    <Grid item sm={12} md={5} align='center' padding='0.5em'>
+                    <Grid item sm={12} md={4}>
                         <img src={picture} alt="départ" width="100%" height="auto"
                             style={{
                                 objectFit:"cover",
                             }} 
                         />
                     </Grid>
-                    <Grid item sm={12} md={7} align='left' padding='0.5em'>
+                    <Grid item sm={12} md={8} padding='0em 1em'>
                         <Typography color='primary' fontSize='40px' margin="0em 0em 0.5em" fontFamily="Caveat">Je suis...</Typography>
 
                         {/* Forms container */}
@@ -68,8 +68,11 @@ const Inscription = () => {
                                     boxSizing: "border-box",
                                 }}
                             >
-                                <form noValidate autoComplete='off' onSubmit={handleSubmit}
-                                    style = {{ width: '100%', boxSizing: 'border-box' }}
+                                <form 
+                                noValidate 
+                                autoComplete='off' 
+                                // onSubmit={handleSubmit}
+                                style = {{ width: '100%', boxSizing: 'border-box' }}
                                 >
                                     <FormLabel>
                                         <Typography color='secondary' fontWeight="bold" fontSize="24px" fontFamily="Caveat">
@@ -103,9 +106,14 @@ const Inscription = () => {
                                     <Button type='submit' 
                                     onClick={() => console.log('Clicked !')} variant='contained' color='secondary' 
                                     sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkbutton={true}>
-                                    <Typography textTransform='none' fontFamily="Caveat">
-                                        Se connecter
-                                    </Typography>
+                                        <Link href='/organisateur' style={{
+                                            textDecoration: 'none',
+                                            color: 'white',
+                                        }}>
+                                            <Typography textTransform='none' fontFamily="Caveat" fontSize="22px">
+                                                Se connecter
+                                            </Typography>
+                                        </Link>
                                     </Button>
                                 </form>
                             </Grid>
@@ -119,8 +127,11 @@ const Inscription = () => {
                                     boxSizing: "border-box",
                                 }}
                             >
-                                <form noValidate autoComplete='off' onSubmit={handleSubmit}
-                                    style = {{ width: '100%', boxSizing: 'border-box' }}
+                                <form 
+                                noValidate 
+                                autoComplete='off' 
+                                // onSubmit={handleSubmit}
+                                style = {{ width: '100%', boxSizing: 'border-box' }}
                                 >
                                     <FormLabel>
                                         <Typography color='primary' fontWeight="bold" fontSize="24px" fontFamily="Caveat">
@@ -154,9 +165,14 @@ const Inscription = () => {
                                     <Button type='submit' 
                                     onClick={() => console.log('Clicked !')} variant='contained' color='primary' 
                                     sx={{borderRadius:'20px', marginTop:'2em', width:'100%'}} linkbutton={true}>
-                                        <Typography textTransform='none' color='secondary' fontFamily="Caveat">
-                                            Se connecter
-                                        </Typography>
+                                        <Link href='/visiteur' style={{
+                                            textDecoration: 'none',
+                                            color: '#370665',
+                                        }}>
+                                            <Typography textTransform='none' color='secondary' fontFamily="Caveat" fontSize="22px">
+                                                Se connecter
+                                            </Typography>
+                                        </Link>
                                     </Button>
                                 </form>
                             </Grid>
