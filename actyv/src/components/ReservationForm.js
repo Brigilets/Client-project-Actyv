@@ -99,6 +99,7 @@ const Reservation = () => {
             style={{
               display: 'flex',
               flexDirection: 'row'
+              
             }}>
                 <Grid container >
               <Typography color="secondary"> Selectionez la date: </Typography>
