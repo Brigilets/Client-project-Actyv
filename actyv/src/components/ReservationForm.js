@@ -95,7 +95,7 @@ const Reservation = () => {
               </Grid>
 <Grid container mt={2} justifyContent="center">
           <Grid item
-           xs={3}
+           xs={4}
             style={{
               display: 'flex',
               flexDirection: 'row'
@@ -106,7 +106,8 @@ const Reservation = () => {
          <Grid item  xs={12} ml={2}>
          <LocalizationProvider dateAdapter={AdapterDateFns}>
   <DatePicker
-    label="Selectionez la date: "
+    label=""
+    name='date'
     value={date}
     xs={6}
     onChange={(date) => {
