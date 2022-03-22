@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "../components/Navbar.css";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
@@ -9,11 +10,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from '../img/actyv_logo_3.png';
-import Link from '@mui/material/Link';
+import {a} from '@mui/material/Link';
+import {Link} from "react-scroll";
+import {animateScroll as scroll} from 'react-scroll';
 
 
-const pages = ['Formules et activités proposées', 'À propos', 'Contact'];
-// const settings = ['Formules et activités proposées', 'A propos', 'Contact'];
+
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -62,7 +64,8 @@ const Navbar = () => {
             > */}
 
               {/* Custom logo */}
-              <Link href='/'>
+              <Link onClick={() =>
+              scroll.scrollToTop()}>
                 <img src={logo} width="65" height="65" alt='logo-3'/>
               </Link>
 
@@ -83,7 +86,7 @@ const Navbar = () => {
                 </IconButton>
 
                 {/* Mobile menu dropdown */}
-                <Menu
+                <Menu className='menu-links'
                   id="menu-appbar"
                   anchorEl={anchorElNav}
                   anchorOrigin={{
@@ -102,11 +105,16 @@ const Navbar = () => {
                   }}
                 >
                   {/* Dropdown menu contents */}
-                  {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center" color="secondary" fontSize="14px" fontWeight='bold' fontFamily='Raleway' >{page}</Typography>
+ 
+                    <MenuItem  onClick={handleCloseNavMenu}>
+                      <Link to="formules"smooth={true} durattion={1000} textAlign="center" color="#370665" fontSize="14px" fontWeight='bold' fontFamily='Raleway' > Formules et activités proposées</Link>
                     </MenuItem>
-                  ))}
+                    <MenuItem  onClick={handleCloseNavMenu}>
+                      <Link  to="aboutme"smooth={true} durattion={1000} textAlign="center" color="#370665" fontSize="14px" fontWeight='bold' fontFamily='Raleway' > À propos</Link>
+                    </MenuItem>
+                    <MenuItem  onClick={handleCloseNavMenu}>
+                      <Link to="contact"smooth={true} durattion={1000} textAlign="center" color="#370665" fontSize="14px" fontWeight='bold' fontFamily='Raleway' > Contact</Link>
+                    </MenuItem>
                 </Menu>
               </Box>
 
@@ -115,19 +123,45 @@ const Navbar = () => {
                 display: { xs: 'none', md: 'flex' },
                 justifyContent: 'flex-end',
                 alignContent: 'flex-end',
+              
               }}>
                 {/* Expanded menu list (as buttons) */}
-                {pages.map((page) => (
+          
                   <Button
-                    key={page}
+                    
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, ml: 3 }}
                   >
-                    <Typography color='secondary' textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
-                      {page}
-                    </Typography>
+                    <Link to='formules' smooth={true} duration={1000} color="#370665"  textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
+                     Formules et activités proposées
+                    </Link>
+                    
                   </Button>
-                ))}
+
+                  <Button
+                    
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, ml: 3 }}
+                  >
+                    <Link to="aboutme" smooth={true}  color="#370665" duration={1000} textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
+                    À propos
+                    </Link>
+                    
+                  </Button>
+
+                  <Button
+                    
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, ml: 3 }}
+                  >
+                    <Link to="contact" smooth={true} color="#370665"  duration={1000}  textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
+                    Contact
+                    </Link>
+                    
+                  </Button>
+
+                  
+               
               </Box>
             {/* </Toolbar> */}
           </Container>
