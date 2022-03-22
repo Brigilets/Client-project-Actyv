@@ -31,7 +31,7 @@ const Footer = () => {
                 justifyContent: 'flex-end',
                 alignContent: 'flex-end',
               }}>
-                <Typography color='white' textTransform='none' fontSize='12px' fontFamily='Raleway' fontWeight='bold'>
+                <Typography color='white' textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
                     Copyright &#169; 2022 Actyv.be
                 </Typography>
               </Box>

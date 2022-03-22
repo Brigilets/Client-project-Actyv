@@ -41,7 +41,7 @@ const Inscription = () => {
                 style = {{
                     padding:'0',
                     maxWidth: '100%',
-                    margin: '3em auto',
+                    margin: '10em auto 3em',
                     width: '90%',
                 }}
             >
@@ -179,7 +179,7 @@ const Inscription = () => {
                         </Grid>
                     </Grid>
                     <Link href="/Inscription">
-                        <Button sx={{ paddingTop:"3rem", float:"left", fontFamily:"Caveat", fontSize:"20px", marginBottom:"2em"}} > 
+                        <Button sx={{ marginTop:"2rem", float:"left", fontFamily:"Caveat", fontSize:"20px", marginBottom:"2em"}} > 
                             <Typography color="#30C9B0" fontFamily="Caveat">Pas encore inscrit ? Inscrivez-vous.</Typography> 
                         </Button>
                     </Link>
