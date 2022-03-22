@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from '../img/actyv_logo_3.png';
-import {a} from '@mui/material/Link';
+// import {a} from '@mui/material/Link';
 import {Link} from "react-scroll";
 import {animateScroll as scroll} from 'react-scroll';
 
@@ -36,9 +36,17 @@ const Navbar = () => {
     //   setAnchorElUser(null);
     // };
 
+    function MouseOver(event) {
+      event.target.style.cursor = 'pointer';
+    }
+    function MouseOut(event){
+      event.target.style.cursor="default";
+    }
+
     return (
         <AppBar 
-          position="static" 
+          // position="static" 
+          position="fixed"
           style={{
             backgroundColor: 'white',
             boxShadow: "0px 0px 0px 0px",
@@ -64,7 +72,10 @@ const Navbar = () => {
             > */}
 
               {/* Custom logo */}
-              <Link onClick={() =>
+              <Link to='/'
+              // sx={{ '&:hover': {cursor: "pointer"}}}
+              onMouseOver={MouseOver} onMouseOut={MouseOut}
+              onClick={() =>
               scroll.scrollToTop()}>
                 <img src={logo} width="65" height="65" alt='logo-3'/>
               </Link>
@@ -107,13 +118,13 @@ const Navbar = () => {
                   {/* Dropdown menu contents */}
  
                     <MenuItem  onClick={handleCloseNavMenu}>
-                      <Link to="formules"smooth={true} durattion={1000} textAlign="center" color="#370665" fontSize="14px" fontWeight='bold' fontFamily='Raleway' > Formules et activités proposées</Link>
+                      <Link to="formules"smooth={true} duration={1000} textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Formules et activités proposées</Typography></Link>
                     </MenuItem>
                     <MenuItem  onClick={handleCloseNavMenu}>
-                      <Link  to="aboutme"smooth={true} durattion={1000} textAlign="center" color="#370665" fontSize="14px" fontWeight='bold' fontFamily='Raleway' > À propos</Link>
+                      <Link to="aboutme"smooth={true} duration={1000} textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">À propos</Typography></Link>
                     </MenuItem>
                     <MenuItem  onClick={handleCloseNavMenu}>
-                      <Link to="contact"smooth={true} durattion={1000} textAlign="center" color="#370665" fontSize="14px" fontWeight='bold' fontFamily='Raleway' > Contact</Link>
+                      <Link to="contact"smooth={true} duration={1000} textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Contact</Typography></Link>
                     </MenuItem>
                 </Menu>
               </Box>
@@ -125,43 +136,31 @@ const Navbar = () => {
                 alignContent: 'flex-end',
               
               }}>
+
                 {/* Expanded menu list (as buttons) */}
-          
                   <Button
-                    
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, ml: 3 }}
                   >
-                    <Link to='formules' smooth={true} duration={1000} color="#370665"  textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
-                     Formules et activités proposées
+                    <Link to='formules' smooth={true} duration={1000}><Typography color="secondary"  textTransform='none' fontSize='16px' fontWeight='bold'>Formules et activités proposées</Typography>
                     </Link>
-                    
                   </Button>
-
-                  <Button
-                    
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, ml: 3 }}
-                  >
-                    <Link to="aboutme" smooth={true}  color="#370665" duration={1000} textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
-                    À propos
-                    </Link>
-                    
-                  </Button>
-
-                  <Button
-                    
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, ml: 3 }}
-                  >
-                    <Link to="contact" smooth={true} color="#370665"  duration={1000}  textTransform='none' fontSize='14px' fontFamily='Raleway' fontWeight='bold'>
-                    Contact
-                    </Link>
-                    
-                  </Button>
-
                   
-               
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, ml: 3 }}
+                  >
+                    <Link to='aboutme' smooth={true} duration={1000}><Typography color="secondary"  textTransform='none' fontSize='16px' fontWeight='bold'>À propos</Typography>
+                    </Link>
+                  </Button>
+                  
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, ml: 3 }}
+                  >
+                    <Link to='contact' smooth={true} duration={1000}><Typography color="secondary"  textTransform='none' fontSize='16px' fontWeight='bold'>Contact</Typography>
+                    </Link>
+                  </Button>
               </Box>
             {/* </Toolbar> */}
           </Container>
