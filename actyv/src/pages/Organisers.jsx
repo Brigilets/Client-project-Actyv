@@ -2,8 +2,10 @@ import { Container, Typography, Grid } from "@mui/material";
 import React from "react";
 import Organiser from "../components/Organiser";
 import Accordions from "../components/Accordion";
+import {useParams} from 'react-router-dom'
 
 const Organisers = () => {
+  const {id} = useParams()
   return (
     <Container>
       <Typography
@@ -15,7 +17,7 @@ const Organisers = () => {
       >
         Organisateur
       </Typography>
-      <Organiser />
+      <Organiser /* id={id} *//>
       <Typography
         variant="h2"
         color="primary"

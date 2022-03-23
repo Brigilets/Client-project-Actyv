@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Grid, Button } from "@mui/material";
 
 const OrganiserCard = ({ organiser }) => {
+
   return (
     <Grid container sx={{ borderStyle: "dotted", borderColor: "pink" }}>
       <Grid item xs={12} lg={4} sx={{ borderStyle: "dotted" }}>
