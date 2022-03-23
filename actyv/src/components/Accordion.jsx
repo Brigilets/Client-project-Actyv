@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Grid, Button } from "@mui/material";
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
@@ -46,6 +47,14 @@ export default function ControlledAccordions() {
             Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
             Aliquam eget maximus est, id dignissim quam.
           </Typography>
+          <Button
+              variant="contained"
+              color="secondary"
+              size='medium'
+              sx={{ textTransform: "none", fontWeight: 800 }}
+            >
+              S'inscrire aux prochaines séances
+            </Button>
         </AccordionDetails>
       </Accordion>
 
