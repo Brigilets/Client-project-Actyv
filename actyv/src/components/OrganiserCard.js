@@ -13,8 +13,8 @@ const OrganiserCard = ({ organiser }) => {
         <CardMedia
           component="img"
           height="100%"
-          image={organiser.avatar.file.url}
-          alt={organiser.prnom}
+          image={organiser?.avatar.file.url}
+          alt={organiser?.prnom}
           sx={{ borderStyle: "dotted", borderColor: "blue" }}
         />
       </Grid>
@@ -35,11 +35,11 @@ const OrganiserCard = ({ organiser }) => {
               color="secondary"
               sx={{ textAlign: "left", fontWeight: 800 }}
             >
-              {organiser.prnom}{' '}
-              {organiser.name}
+              {organiser?.prnom}{' '}
+              {organiser?.name}
             </Typography>
 
-            <Typography sx={{color: 'secondary.main', textAlign: 'left'}}>{organiser.role}</Typography>
+            <Typography sx={{color: 'secondary.main', textAlign: 'left'}}>{organiser?.role}</Typography>
             <Typography
               color="secondary"
               sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
@@ -58,7 +58,7 @@ const OrganiserCard = ({ organiser }) => {
               color="text.secondary"
               sx={{ textAlign: "justify" }}
             >
-              {organiser.description}
+              {organiser?.description}
             </Typography>
           </Grid>
 
