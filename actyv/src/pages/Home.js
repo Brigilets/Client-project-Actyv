@@ -6,7 +6,10 @@ import HomeButtons from '../components/HomeButtons';
 import AboutMe from '../components/AboutMe';
 import ContactForm from '../components/ContactForm';
 import Swipe from '../components/Swipe';
-import {Link} from 'react-scroll'
+import {Link} from 'react-scroll';
+import Reservation from '../components/ReservationForm';
+//import Activity from '../components/Activity';
+import ActivityQL from '../components/activitegraphiql';
 
 
 function Home() {
@@ -19,6 +22,8 @@ function Home() {
         <AboutMe />
         <ContactForm />
         <HomeButtons />
+        <Reservation/>
+     <ActivityQL/>
     </div>
   )
 }

@@ -93,13 +93,13 @@ const Reservation = () => {
                   ></TextField>
               </Grid>
               </Grid>
-<Grid container mt={2} justifyContent="center">
+
+<Grid container mt={2} justifyContent="space-between">
           <Grid item
            xs={4}
             style={{
               display: 'flex',
-              flexDirection: 'row'
-              
+              flexDirection: 'row'  
             }}>
                 <Grid container >
               <Typography color="secondary"> Selectionez la date: </Typography>
