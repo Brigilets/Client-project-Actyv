@@ -9,28 +9,19 @@ const Organiser = () =>{
   const { getOrganisers } = useContentful();
 
   useEffect(() => {
-    getOrganisers().then((response) => setOrganisers(response));
-   /* console.log(organisers) */
-  }, [getOrganisers]);
+   const getapi = () => {getOrganisers().then((response) => setOrganisers(response))};
+   getapi()
+  }, []);
 
-  const key = 0
-
-  useEffect(() => {
-    (function(){
-      setX(key)
-    })()
-  }, [key])
-  
-
-
+  console.log(organisers)
   return (
    <div data-testid="organiser" >
-      {/* <OrganiserCard data-testid="organiser-card" key={index} organiser={organisers[x]}/> */}
-  {
+      <OrganiserCard data-testid="organiser-card" /* key={index} */ organiser={organisers[1]}/>
+  {/* {
      organisers.map((organiser, index) => 
     <OrganiserCard data-testid="organiser-card" key={index} organiser={organiser}/>
     )
-   } 
+   }  */}
    
    </div>
   )
