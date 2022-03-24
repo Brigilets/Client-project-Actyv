@@ -2,7 +2,6 @@ import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import Container from '@mui/material/Container';
@@ -59,13 +58,15 @@ export default function Searchbar() {
   return (
     <Box sx={{ 
             flexGrow: 1,
-            
         }}>
       <AppBar position="static"
         style={{
             background: "linear-gradient(180deg, #ffffff 0%, var(--token-dbb08f27-7ee1-48fd-bd6a-2da0de62c852, rgb(248, 127, 73))",
-            padding: "8em 3em 7em",
-            boxShadow: "0px 0px"
+            padding: "8em 0.5em 7em",
+            boxShadow: "0px 0px",
+            '@media (min-width: 680px)': { padding:"8em 2em 7em" },
+            '@media (max-width: 680px)': { padding:"3em 2em" },
+            '@media (max-width: 380px)': { padding:"2zem 1em" },
         }}
       >
         <Box>
@@ -83,20 +84,17 @@ export default function Searchbar() {
             maxWidth: "1800px"
             }}
         >
-            {/* <Toolbar> */}
-                <Search>
-                    <SearchIconWrapper>
-                    <SearchIcon />
-                    </SearchIconWrapper>
-                    <StyledInputBase
-                    sx={{ width:"25em" }}
-                    placeholder="Découvrez les activités culturelles..."
-                    inputProps={{ 'aria-label': 'search', width:"20em"  }}
-                    type="search"
-                    fullWidth
-                    />
-                </Search>
-            {/* </Toolbar> */}
+              <Search>
+                  <SearchIconWrapper>
+                  <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                  placeholder="Découvrez les activités culturelles"
+                  inputProps={{ 'aria-label': 'search'  }}
+                  type="search"
+                  fullWidth
+                  />
+              </Search>
           </Container>
       </AppBar>
     </Box>

@@ -7,7 +7,15 @@ import picture from '../img/Picture1.jpg';
 
 export default function BasicGrid() {
     return (
-        <Box id="aboutme" sx={{backgroundColor:"rgba(252, 153, 24, 0.2)", padding:"3rem 5rem"}} >
+        <Box id="aboutme" 
+        sx={{
+            backgroundColor:"rgba(252, 153, 24, 0.2)", 
+            padding:"3rem 5rem",
+            '@media (max-width: 768px)': { padding:"3rem 3rem" },
+            '@media (max-width: 680px)': { padding:"3rem 2rem" },
+            '@media (max-width: 380px)': { padding:"3rem 1rem" },
+        }} 
+        >
             <Grid container spacing={3}>
                 <Grid item lg={4} md={4} sm={6} xs={12} >
                     <Card>
@@ -20,15 +28,16 @@ export default function BasicGrid() {
                         />
                     </Card>
                 </Grid>
-                <Grid item lg={8} md={8} sm={12} xs={12} >
-                <Typography 
-                    color="primary"
-                    fontFamily="Caveat"
-                    fontWeight="600"
-                    fontSize={44}
-                    textAlign="justify"
-                    padding="0.5rem"
-                > À propos </Typography>
+                <Grid item lg={8} md={8} sm={12}>
+                    <Typography 
+                        color="primary"
+                        fontFamily="Caveat"
+                        fontWeight="600"
+                        fontSize={44}
+                        textAlign="justify"
+                        padding="0.5rem"
+                    > À propos 
+                    </Typography>
              
                     <Typography
                     textAlign="justify" fontFamily="Raleway" sx={{alignItems:"center", padding:"0.5rem"}}

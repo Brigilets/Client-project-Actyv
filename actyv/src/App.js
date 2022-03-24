@@ -87,6 +87,8 @@ const App = () => {
       </div>
       </Router>
     </ThemeProvider>
+    // Communautés africain, afrique du nord, latino, 
+    // Photos
   );
 }
 

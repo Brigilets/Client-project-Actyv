@@ -85,10 +85,10 @@ const ContactForm = () => {
               mt={3}
               alignItems="center"
             >
-              <Grid item xs={2} mr={1}>
-                <Typography color="secondary" fontWeight="bold"> Nom: </Typography>
+              <Grid item sm={1} mr={2} mb={1}>
+                <Typography color="secondary" fontWeight="bold" fontSize="14px"> Nom: </Typography>
               </Grid>
-              <Grid item xs={9}>
+              <Grid item sm={10} xs={12}>
                 <TextField
                   // variant="filled"
                   id="name"
@@ -116,10 +116,10 @@ const ContactForm = () => {
               mt={3}
               alignItems="center"
             >
-              <Grid item xs={2} mr={1}>
-                <Typography color="secondary" fontWeight="bold"> Email: </Typography>
+              <Grid item sm={1} mr={2} mb={1}>
+                <Typography color="secondary" fontWeight="bold" fontSize="14px"> Email: </Typography>
               </Grid>
-              <Grid item xs={9}>
+              <Grid item sm={10} xs={12}>
                 <TextField
                   // variant="filled"
                   border="none"
@@ -141,25 +141,23 @@ const ContactForm = () => {
               </Grid>
             </Grid>
 
-            {/* <Grid container justifyContent="space-between" mt={3} padding="0em 1.5em"> */}
-            <Grid container justifyContent="center" mt={3} padding="0em 0em 0em 2.5em"
-            sx={{
-              '@media (max-width:1580px)': { paddingLeft: "2em"},
-              '@media (max-width:1400px)': { paddingLeft: "1.8em"},
-              '@media (max-width:1200px)': { paddingLeft: "1.4em"},
-              '@media (max-width:750px)': { paddingLeft: "1.1em"},
-              '@media (max-width:600px)': { padding: "0em 0.4em"}
-            }}
+            <Grid container mt={3} 
+              sx={{
+                '@media(min-width:1600px)' : { paddingLeft: '0.6em'  },
+                '@media (min-width:740px) and (max-width:900px)': { paddingLeft: '0.4em' },
+                // '@media (max-width: 640px)': { padding: "0em 0.2em"}
+              }}
             >
+
               {/* STATUS */}
-              <Grid item xs={12} sm={4} mb={1.5}>
+              <Grid item mb={1.5} xs={12} sm={4} md={4}>
                 <Grid container>
                   <Grid item>
-                    <Typography color="secondary" fontWeight="bold"> Status: </Typography>
+                    <Typography color="secondary" fontWeight="bold" fontSize="14px"> Status: </Typography>
                   </Grid>
-                  <Grid item ml={3}
+                  <Grid item ml={3.5}
                     sx={{
-                      '@media (max-width:600px)': { marginLeft: 4},
+                      '@media (max-width:600px)': { marginLeft: 4 },
                     }}
                   >
                     <FormControl>
@@ -197,12 +195,12 @@ const ContactForm = () => {
               </Grid>
 
               {/* LANGUAGES */}
-              <Grid item xs={12} sm={4} mb={1.5}>
+              <Grid item mb={1.5} xs={12} sm={4} md={4}>
                 <Grid container>
                   <Grid item>
-                    <Typography color="secondary" fontWeight="bold"> Langue: </Typography>
+                    <Typography color="secondary" fontWeight="bold" fontSize="14px"> Langue: </Typography>
                   </Grid>
-                  <Grid item ml={3}
+                  <Grid item ml={3.5}
                     sx={{
                       '@media (max-width:600px)': { marginLeft: 2.7},
                     }}
@@ -242,16 +240,12 @@ const ContactForm = () => {
               </Grid>
 
               {/* AGE */}
-              <Grid item xs={12} sm={4} md={4}>
-                <Grid container alignText="left" alignItems="left" >
-                  <Grid item xs={1} mr={4.5} mb={1}>
-                    <Typography color="secondary" fontWeight="bold"> Age: </Typography>
+              <Grid item xs={12} sm={4} >
+                <Grid container columns={14}>
+                  <Grid item mr={3.5} mb={1} xs={1} sm={2} md={1}>
+                    <Typography color="secondary" fontWeight="bold" fontSize="14px"> Age: </Typography>
                   </Grid>
-                  <Grid item xs={6}
-                    sx={{
-                      '@media (max-width:600px)': { marginLeft: 0.8},
-                    }}
-                  >
+                  <Grid item xs={14} sm={8} md={9} >
                     <TextField
                       type="number"
                       id="age"
@@ -270,29 +264,17 @@ const ContactForm = () => {
                 </Grid>
               </Grid>
             </Grid>
-
-            {/* BUTTON */}
-            {/* <Grid container justifyContent="flex-start" mt={5} ml={4}>
-              <Grid item>
-                <Button
-                  variant="contained"
-                  type={"submit"}
-                  sx={{ color: "#370665", backgroundColor:"#FC991899", fontFamily: "Caveat", fontSize:"22px", fontWeight:"bold", textTransform:"none", borderRadius:"25px", padding:"7px 25px" }}
-                >
-                  Envoyez
-                </Button>
-              </Grid>
-            </Grid> */}
           </Grid>
 
           {/* MESSAGE BOX */}
           <Grid item xs={12} md={6}>
             <Grid container mt={3} ml={0}>
-              <Grid item xs={2} mr={1}>
-                <Typography color="secondary" fontWeight="bold"> Message: </Typography>
+              <Grid item mr={3} mb={1} xs={1} sm={1} md={1.5} lg={1} >
+                <Typography color="secondary" fontWeight="bold" align="left" fontSize="14px" paddingTop="0.9em" > Message: </Typography>
               </Grid>
 
-              <Grid item xs={9} backgroundColor="#FC991833">
+              <Grid item xs={12} sm={10} md={9.5} lg={10} 
+              backgroundColor="#FC991833">
                   <TextField
                       type="text"
                       id="message"
@@ -332,17 +314,11 @@ const ContactForm = () => {
         </Grid>
 
         {/* BUTTON */}
-        <Grid container justifyContent="flex-start" mt={5} ml={2}>
-              <Grid item>
-                <Button
-                  variant="contained"
-                  type={"submit"}
-                  sx={{ color: "#370665", backgroundColor:"#FC991899", fontFamily: "Caveat", fontSize:"20px", fontWeight:"bold", textTransform:"none", borderRadius:"25px", padding:"7px 25px" }}
-                >
-                  Envoyez
-                </Button>
-              </Grid>
-            </Grid>
+        <Button variant="contained" type={"submit"}
+          sx={{ color: "#370665", backgroundColor:"#FC991899", fontFamily: "Caveat", fontSize:"20px", fontWeight:"bold", textTransform:"none", borderRadius:"25px", padding:"7px 25px", display:"flex", justifyContent:"start", margin:"1.5em 0em" }}
+        >
+          Envoyez
+        </Button>
       </Box>
     </Container>
   );
