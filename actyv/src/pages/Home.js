@@ -5,7 +5,7 @@ import Searchbar from '../components/Searchbar'
 import HomeButtons from '../components/HomeButtons';
 import AboutMe from '../components/AboutMe';
 import ContactForm from '../components/ContactForm';
-// import Swipe from '../components/Swipe';
+import Swipe from '../components/Swipe';
 // import {Link} from 'react-scroll'
 import { Box } from '@mui/system';
 
