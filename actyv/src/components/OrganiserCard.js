@@ -8,14 +8,13 @@ import { Grid, Button } from "@mui/material";
 const OrganiserCard = ({ organiser }) => {
 
   return (
-    <Grid container sx={{ borderStyle: "dotted", borderColor: "pink" }}>
-      <Grid item xs={12} lg={4} sx={{ borderStyle: "dotted" }}>
+    <Grid container>
+      <Grid item xs={12} lg={4} >
         <CardMedia
           component="img"
           height="100%"
           image={organiser?.avatar.file.url}
           alt={organiser?.prnom}
-          sx={{ borderStyle: "dotted", borderColor: "blue" }}
         />
       </Grid>
 
@@ -25,9 +24,8 @@ const OrganiserCard = ({ organiser }) => {
           container
           
           p={3}
-          sx={{ borderStyle: "dotted", height: "100%" }}
         >
-          <Grid item xs={12} sx={{ borderStyle: "dotted", borderColor: 'red' }}>
+          <Grid item xs={12}>
             <Typography
               gutterBottom
               variant="h6"
@@ -62,7 +60,7 @@ const OrganiserCard = ({ organiser }) => {
             </Typography>
           </Grid>
 
-          <Grid container justifyContent='flex-start' mt={3} item xs={4} sx={{ borderStyle: "dotted", borderColor: 'yellow' }}>
+          <Grid container justifyContent='flex-start' mt={3} item xs={4}>
             <Button
               variant="contained"
               color="secondary"
