@@ -27,7 +27,8 @@ function Filters() {
 
 
         <Box
-            padding="4rem ">
+            padding="4rem "
+            marginTop="5em">
             <Typography
                 color="primary"
                 fontFamily="Caveat"
@@ -64,7 +65,7 @@ function Filters() {
                 <FormControl fullWidth >
                     <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
                         <DatePicker
-                            label="Selectionez la date: "
+                        
                             value={date}
                             
                             onChange={(date) => {
