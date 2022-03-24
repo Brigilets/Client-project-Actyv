@@ -4,21 +4,26 @@ import useContentful from "../useContentful";
 import OrganiserCard from './OrganiserCard';
 
 const Organiser = () =>{
+  const [x, setX] = useState('')
   const [organisers, setOrganisers] = useState([]);
   const { getOrganisers } = useContentful();
 
   useEffect(() => {
-    getOrganisers().then((response) => setOrganisers(response));
-   // console.log(organisers)
-  },[]);
+   const getapi = () => {getOrganisers().then((response) => setOrganisers(response))};
+   getapi()
+  }, []);
 
+  console.log(organisers)
   return (
    <div data-testid="organiser" >
-   {
+      <OrganiserCard data-testid="organiser-card" /* key={index} */ organiser={organisers[1]}/>
+  {/* {
      organisers.map((organiser, index) => 
     <OrganiserCard data-testid="organiser-card" key={index} organiser={organiser}/>
     )
-   }</div>
+   }  */}
+   
+   </div>
   )
 }
 export default Organiser

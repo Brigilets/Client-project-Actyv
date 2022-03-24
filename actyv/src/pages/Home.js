@@ -10,14 +10,19 @@ import {Link} from 'react-scroll';
 import Reservation from '../components/ReservationForm';
 //import Activity from '../components/Activity';
 import ActivityQL from '../components/activitegraphiql';
+// import Swipe from '../components/Swipe';
+// import {Link} from 'react-scroll'
+import { Box } from '@mui/system';
 
 
 function Home() {
   return (
     <div>
-        <img src={logo} width="340" height="340" alt='logo-2' />
+      <Box sx={{margin:"10em 0em 0em 0em"}} >
+        <img src={logo} width="340" height="340" alt='logo-2'/>
+      </Box>
         <Searchbar />
-        <Swipe />
+        {/* <Swipe /> */}
         <Formules />
         <AboutMe />
         <ContactForm />

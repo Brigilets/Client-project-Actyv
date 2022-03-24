@@ -13,6 +13,7 @@ import SearchResults from './pages/SearchResults';
 import Reservation from './components/ReservationForm';
 import Organisers from './pages/Organisers';
 import Visiteur from './pages/Visiteur';
+import ProfilVisiteur from './pages/ProfilVisiteur';
 
 const theme = createTheme({
   // Custom color palette
@@ -73,6 +74,7 @@ const App = () => {
             <Route path="/connexion" element={ <Connexion /> } />
             <Route path='/organiser' element={ <Organisers />} />
             <Route path="/visiteur" element={ <Visiteur /> } />
+            <Route path="/profil_visiteur" element={ <ProfilVisiteur /> } />
           </Routes>
 
           {/* A inclure dans leurs pages respectives */}
