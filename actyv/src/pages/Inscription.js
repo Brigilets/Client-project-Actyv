@@ -55,7 +55,7 @@ const Inscription = () => {
                 }}
             >
                 <Grid container>
-                    <Grid item sm={12} md={4}>
+                    <Grid item xs={12} sm={12} md={4}>
                         <img src={picture} alt="départ" width="100%" height="100%"
                             style={{
                                 objectFit:"cover",
@@ -63,7 +63,7 @@ const Inscription = () => {
                         />
                     </Grid>
                     <Grid item sm={12} md={8} padding='0em 1em'>
-                        <Typography color='primary' fontSize='40px' margin="0em 0em 0.5em" fontFamily="Caveat">Je me présente...</Typography>
+                        <Typography color='primary' fontSize='40px' margin="0.5em 0em" fontFamily="Caveat">Je me présente...</Typography>
 
                         {/* Forms container */}
                         <Grid container className="forms" style={{ display: "flex", justifyContent: "center", width: "100%" }}>
