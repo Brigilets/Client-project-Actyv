@@ -14,6 +14,7 @@ import Reservation from './components/ReservationForm';
 import Organisers from './pages/Organisers';
 import Visiteur from './pages/Visiteur';
 import ProfilVisiteur from './pages/ProfilVisiteur';
+import Erreur from './pages/Error'
 
 
 const theme = createTheme({
@@ -78,6 +79,7 @@ const App = () => {
             <Route path='/organisateur/:id' element={ <Organisers />} />
             <Route path="/visiteur" element={ <Visiteur /> } />
             <Route path="/profil_visiteur" element={ <ProfilVisiteur /> } />
+            <Route path='*' element={<Erreur />} />
           </Routes>
 
           {/* A inclure dans leurs pages respectives */}
