@@ -73,7 +73,7 @@ function Filters() {
                 <FormControl fullWidth >
                     <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
                         <DatePicker
-                            label="Selectionez la date: "
+                        
                             value={date}
                             
                             onChange={(date) => {

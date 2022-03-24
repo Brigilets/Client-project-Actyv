@@ -15,6 +15,7 @@ import Organisers from './pages/Organisers';
 import Visiteur from './pages/Visiteur';
 import ProfilVisiteur from './pages/ProfilVisiteur';
 
+
 const theme = createTheme({
   // Custom color palette
   palette: {
@@ -69,6 +70,8 @@ const App = () => {
 
           <Routes>
             <Route exact path="/" element={ <Home /> } />
+            <Route exact path="/formules" element={ <Home /> } />
+
             <Route path="/searchresults" element={ <SearchResults /> } />
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
