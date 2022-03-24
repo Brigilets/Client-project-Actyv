@@ -13,7 +13,7 @@ const client = createClient({
 const getOrganisers = async() =>{
 try{
 const entries = await client.getEntries({
-    content_type: "organiser",
+    content_type: "organisateur",
     select: "fields",
 })
 

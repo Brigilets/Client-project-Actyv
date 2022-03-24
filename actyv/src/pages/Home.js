@@ -22,8 +22,8 @@ function Home() {
         <AboutMe />
         <ContactForm />
         <HomeButtons />
-        <Reservation/>
-     <ActivityQL/>
+
+
     </div>
   )
 }
