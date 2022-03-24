@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
+import { Typography } from '@mui/material';
 import useContentful from "../useContentful";
 import OrganiserCard from './OrganiserCard';
 
-const Organiser = () =>{
-  const [x, setX] = useState('')
+const Organiser = ({id}) =>{
   const [organisers, setOrganisers] = useState([]);
   const { getOrganisers } = useContentful();
 
@@ -13,17 +13,17 @@ const Organiser = () =>{
    getapi()
   }, []);
 
-  console.log(organisers)
+  const display = () => {
+    if (!(organisers[id])){
+      return <Typography>Cet organisateur n'existe pas encore</Typography>
+    } else {
+      return <OrganiserCard data-testid="organiser-card"  organiser={organisers[id]}/> 
+    }
+  }
+  display()
   return (
-   <div data-testid="organiser" >
-      <OrganiserCard data-testid="organiser-card" /* key={index} */ organiser={organisers[1]}/>
-  {/* {
-     organisers.map((organiser, index) => 
-    <OrganiserCard data-testid="organiser-card" key={index} organiser={organiser}/>
-    )
-   }  */}
-   
-   </div>
+    <>{display()}</>
+  
   )
 }
 export default Organiser
