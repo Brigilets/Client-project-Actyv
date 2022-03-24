@@ -14,6 +14,8 @@ import Reservation from './components/ReservationForm';
 import Organisers from './pages/Organisers';
 import Visiteur from './pages/Visiteur';
 import ProfilVisiteur from './pages/ProfilVisiteur';
+import Erreur from './pages/Error'
+
 
 const theme = createTheme({
   // Custom color palette
@@ -69,12 +71,15 @@ const App = () => {
 
           <Routes>
             <Route exact path="/" element={ <Home /> } />
+            <Route exact path="/formules" element={ <Home /> } />
+
             <Route path="/searchresults" element={ <SearchResults /> } />
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
             <Route path='/organisateur/:id' element={ <Organisers />} />
             <Route path="/visiteur" element={ <Visiteur /> } />
             <Route path="/profil_visiteur" element={ <ProfilVisiteur /> } />
+            <Route path='*' element={<Erreur />} />
           </Routes>
 
           {/* A inclure dans leurs pages respectives */}
