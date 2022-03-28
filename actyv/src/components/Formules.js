@@ -27,6 +27,7 @@ export default function ImgMediaCard() {
              fontWeight={600}
              fontSize="44px"
              textAlign="start"
+             display="block"
              >
                 Formules / Activités proposées
             </Typography>
