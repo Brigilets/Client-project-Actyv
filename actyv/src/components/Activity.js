@@ -59,6 +59,7 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
   
      <Grid item  xs={12} sm={12} md={6} lg={3}>
      <ActivityCard  key={index} activite={activite}/>
+     
      </Grid>
        
      )}
