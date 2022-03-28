@@ -14,7 +14,7 @@ const OrganiserCard = ({ organiser }) => {
           component="img"
           height="100%"
           image={organiser?.avatar.file.url}
-          alt={organiser?.prnom}
+          alt={organiser?.nom}
         />
       </Grid>
 
@@ -33,8 +33,8 @@ const OrganiserCard = ({ organiser }) => {
               color="secondary"
               sx={{ textAlign: "left", fontWeight: 800 }}
             >
-              {organiser?.prnom}{' '}
-              {organiser?.name}
+              {organiser?.nom}{' '}
+            
             </Typography>
 
             <Typography sx={{color: 'secondary.main', textAlign: 'left'}}>{organiser?.role}</Typography>
