@@ -8,6 +8,9 @@ import ContactForm from '../components/ContactForm';
 import Swipe from '../components/Swipe';
 // import {Link} from 'react-scroll'
 import { Box } from '@mui/system';
+import Activity from '../components/Activity';
+
+
 
 
 function Home() {
@@ -18,10 +21,12 @@ function Home() {
       </Box>
         <Searchbar />
         {/* <Swipe /> */}
-        <Formules />
+       {/*<Formules />*/}
+       <Activity/>
         <AboutMe />
         <ContactForm />
         <HomeButtons />
+
     </div>
   )
 }

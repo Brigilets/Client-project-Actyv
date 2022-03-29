@@ -11,12 +11,12 @@ const ActivityCardVisiteur = ({activite}) =>{
         <CardMedia
           component="img"
           height="140"
-          alt={activite.name}
+          alt={activite.nom}
           padding="1em"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" align="left" color="secondary" fontWeight="bold">
-           { activite.name }
+           { activite.nom }
           </Typography>
           <br />
           <Typography variant="body2" color="secondary" align="left">
