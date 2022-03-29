@@ -1,6 +1,6 @@
 import { Container, Typography, Grid } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import Organiser from "../components/Organiser";
+// import Organiser from "../components/Organiser";
 import useContentful from "../useContentful";
 import useActivities from "../useActivities";
 import Accordions from "../components/Accordion";
@@ -72,7 +72,14 @@ const Organisers = () => {
       );
     } else {
       return (
-        <Container sx={{ padding: 5, paddingBottom: 10 }}>
+        <Container 
+          // sx={{ padding: 5, paddingBottom: 10 }}
+          style={{ 
+            maxWidth: '100%',
+            margin: '8em auto 3em',
+            width: '90%',
+          }}
+        >
           <Typography
             variant="h2"
             color="primary"

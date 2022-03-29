@@ -80,7 +80,7 @@ const Reservation = () => {
                   </Grid>
               </Grid>
 
-              <Grid container mt={2} justifyContent="space-between">
+              {/* <Grid container mt={2} justifyContent="space-between">
                 <Grid item
                     xs={4}
                       style={{
@@ -106,7 +106,7 @@ const Reservation = () => {
                         </LocalizationProvider>
                       </Grid>
                   </Grid>
-              </Grid>
+              </Grid> */}
                   
 
               <Grid

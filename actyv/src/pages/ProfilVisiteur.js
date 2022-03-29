@@ -30,7 +30,7 @@ const ProfilVisiteur = () => {
                 Visiteur
             </Typography>
 
-            <Grid container backgroundColor="primary.lightest">
+            <Grid container>
                 <Grid item xs={12} md={3}>
                     <Card boxShadow="0px 0px 0px 0px">
                         <CardMedia
@@ -44,7 +44,8 @@ const ProfilVisiteur = () => {
                 <Grid item xs={12} md={9}
                 sx={{
                     padding:"1em",
-                    '@media (max-width: 640px)': { padding: "0em 0.2em"}
+                    '@media (max-width: 640px)': { padding: "0em 0.2em"},
+                    backgroundColor:"primary.lightest"
                   }}
                 >
                     {/* Name container */}
