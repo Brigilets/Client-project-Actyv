@@ -6,7 +6,9 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Grid, Button } from "@mui/material";
 
-export default function ControlledAccordions() {
+export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
+  
+  
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -43,10 +45,11 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails
         sx={{backgroundColor: 'rgb(49, 200, 177)'}}>
-          <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-            Aliquam eget maximus est, id dignissim quam.
+          <Typography mb={2} sx={{textAlign: 'justify'}}>
+           {fullDay.map(activity => activity?.description)}
           </Typography>
+          {/* {fullDay.map(activity =>
+          <img src={activity.photoDesActivites.fields.file.url}/>)} */}
           <Button
               variant="contained"
               color="secondary"
@@ -71,10 +74,8 @@ export default function ControlledAccordions() {
         <AccordionDetails
         sx={{backgroundColor: 'rgb(49, 200, 177)'}}
         >
-          <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-            varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-            laoreet.
+          <Typography sx={{textAlign: 'justify'}}>
+          {halfDay.map(activity => activity?.description)}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -94,8 +95,7 @@ export default function ControlledAccordions() {
         <AccordionDetails
         sx={{backgroundColor: 'rgb(49, 200, 177)'}}>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
+          {tailorMade.map(activity => activity.description)}
           </Typography>
         </AccordionDetails>
       </Accordion>
