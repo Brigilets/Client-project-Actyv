@@ -14,10 +14,10 @@ const getActivites = async () =>{
         })
     
    const sanitizedEntries = entries.items.map((item)=>{
-       //  const photo = item.fields.photoPrincipal
+         const photo = item.fields.photoPrincipal.fields
             return {
             ...item.fields,
-          //  photo
+            photo
            }
         })
        // console.log('fetched activities data from contentful',sanitizedEntries)
