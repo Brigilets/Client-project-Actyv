@@ -23,7 +23,7 @@ function Filters() {
 
     return (
         <Box 
-        marginTop="3em"
+        marginTop="5em"
         padding="3rem 6rem"  
         sx={{
             '@media (max-width:768px)': { padding:"4rem" },
@@ -44,10 +44,7 @@ function Filters() {
 
 
             <Grid container spacing={1} columns={15}
-            style={{ 
-                // alignItems: "center", 
-                // display: "flex", 
-                // justifyContent: "center", 
+            style={{  
                 width:"100%", 
                 padding:"0" 
             }}>
@@ -121,10 +118,12 @@ function Filters() {
                             label="Age"
                             onChange={handleChange}
                         >
-                            <MenuItem value={10}>40-80$</MenuItem>
-                            <MenuItem value={20}>80-120$</MenuItem>
-                            <MenuItem value={30}>120-160$</MenuItem>
-                            <MenuItem value={30}>160-200$</MenuItem>
+                            <MenuItem value={10}>50-80$</MenuItem>
+                            <MenuItem value={20}>80-110$</MenuItem>
+                            <MenuItem value={30}>110-140$</MenuItem>
+                            <MenuItem value={30}>140-170$</MenuItem>
+                            <MenuItem value={30}>170-200$</MenuItem>
+                            <MenuItem value={30}>200-230$</MenuItem>
                         </Select>
                     </FormControl>
                 </Grid>
@@ -140,8 +139,13 @@ function Filters() {
                             onChange={handleChange}
                         >
                             <MenuItem value={10}>Afrique du Nord</MenuItem>
-                            <MenuItem value={20}>Marocain</MenuItem>
-                            <MenuItem value={30}>Latino-Américain</MenuItem>
+                            <MenuItem value={10}>Afrique Subsaharienne</MenuItem>
+                            <MenuItem value={10}>Amérique Latine</MenuItem>
+                            <MenuItem value={20}>Brésil</MenuItem>
+                            <MenuItem value={20}>Turquie</MenuItem>
+                            <MenuItem value={20}>Asie</MenuItem>
+                            <MenuItem value={20}>Proche Orient</MenuItem>
+                            <MenuItem value={30}>Europe de l'Est</MenuItem>
                         </Select>
                     </FormControl>
 

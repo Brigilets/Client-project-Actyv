@@ -5,15 +5,8 @@ import {
     Grid,
     Card, 
     CardMedia,
-    // TextField,
     Typography,
     TextField,
-    // FormControl,
-    // RadioGroup,
-    // FormControlLabel,
-    // Radio,
-    // Button,
-    // TextareaAutosize,
   } from "@mui/material";
 // import Reservation from '../components/reservationForm';
 // import ActivityVisiteur from '../components/ActivityVisiteur';
@@ -36,19 +29,19 @@ const ProfilVisiteur = () => {
             {" "}
                 Visiteur
             </Typography>
-            <Grid container>
+
+            <Grid container backgroundColor="primary.lightest">
                 <Grid item xs={12} md={3}>
-                    <Card>
+                    <Card boxShadow="0px 0px 0px 0px">
                         <CardMedia
                             component="img"
-                            height="400"
+                            height="100%"
                             src={photo}
                             alt="visiteur-photo"
-                           
                         />
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={9} backgroundColor="primary.lightest"
+                <Grid item xs={12} md={9}
                 sx={{
                     padding:"1em",
                     '@media (max-width: 640px)': { padding: "0em 0.2em"}

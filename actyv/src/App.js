@@ -10,11 +10,13 @@ import Home from './pages/Home';
 import Inscription from './pages/Inscription';
 import Connexion from './pages/Connexion';
 import SearchResults from './pages/SearchResults';
-import Reservation from './components/ReservationForm';
+import SearchOrganisateurs from './pages/SearchOrganisateurs';
 import Organisers from './pages/Organisers';
+import ProfilOrganisateur from './pages/OrganisersProfil';
 import Visiteur from './pages/Visiteur';
 import ProfilVisiteur from './pages/ProfilVisiteur';
-import Erreur from './pages/Error'
+import ReservationVisiteur from './pages/Reservation';
+import Erreur from './pages/Error';
 
 
 const theme = createTheme({
@@ -76,14 +78,16 @@ const App = () => {
             <Route path="/searchresults" element={ <SearchResults /> } />
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
+            <Route path="/organisateur" element={ <SearchOrganisateurs /> } />
             <Route path='/organisateur/:id' element={ <Organisers />} />
+            <Route path='/organisateur/:id/profil' element={ <ProfilOrganisateur />} />
             <Route path="/visiteur" element={ <Visiteur /> } />
             <Route path="/profil_visiteur" element={ <ProfilVisiteur /> } />
+            <Route path="/reservation" element={ <ReservationVisiteur /> } />
             <Route path='*' element={<Erreur />} />
           </Routes>
 
           {/* A inclure dans leurs pages respectives */}
-            {/* <Reservation/> */}
             {/* </Organiser> */}
             {/* <Activity/> */}
         <footer>
@@ -92,8 +96,6 @@ const App = () => {
       </div>
       </Router>
     </ThemeProvider>
-    // Communautés africain, afrique du nord, latino, 
-    // Photos
   );
 }
 
