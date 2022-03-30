@@ -17,9 +17,9 @@ export default function ImgMediaCard() {
             boxSizing: "border-box",
             marginBottom:"4em",
             padding:"3rem 5rem",
-            '@media (max-width: 768px)': { padding:"3rem 3rem" },
-            '@media (max-width: 680px)': { padding:"3rem 2rem" },
-            '@media (max-width: 380px)': { padding:"3rem 1rem" },
+            '@media (maxWidth: 768px)': { padding:"3rem 3rem" },
+            '@media (maxWidth: 680px)': { padding:"3rem 2rem" },
+            '@media (maxWidth: 380px)': { padding:"3rem 1rem" },
         }} >
             <Typography className="title-formules"
              color="primary"

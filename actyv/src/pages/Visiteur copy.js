@@ -52,11 +52,7 @@ const Visiteur = () => {
                 <Grid item xs={12} md={9} backgroundColor="secondary.light"
                 sx={{
                     padding:"1em 2em",
-                    // '@media (min-width:1580px)': { padding: "0em 1em"},
-                    // '@media (min-width:1400px)': { paddingLeft: "1.8em"},
-                    // '@media (min-width:1200px)': { paddingLeft: "1.4em"},
-                    // '@media (min-width:750px)': { paddingLeft: "1.1em"},
-                    '@media (max-width: 640px)': { padding: "0em 0.2em"}
+                    '@media (maxWidth: 640px)': { padding: "0em 0.2em"}
                   }}
                   >
                     <TableContainer>

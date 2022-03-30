@@ -45,7 +45,7 @@ const Visiteur = () => {
                 <Grid item xs={12} md={9} backgroundColor="secondary.light"
                 sx={{
                     padding:"1em 2em",
-                    '@media (max-width: 640px)': { padding: "0em 0.2em"}
+                    '@media (maxWidth: 640px)': { padding: "0em 0.2em"}
                   }}
                 >
                     {/* Name container */}

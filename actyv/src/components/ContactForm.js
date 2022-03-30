@@ -144,8 +144,8 @@ const ContactForm = () => {
             <Grid container mt={3} 
               sx={{
                 '@media(min-width:1600px)' : { paddingLeft: '0.6em' },
-                '@media (min-width:740px) and (max-width:900px)': { paddingLeft: '0.4em' },
-                // '@media (max-width: 640px)': { padding: "0em 0.2em"}
+                '@media (min-width:740px) and (maxWidth:900px)': { paddingLeft: '0.4em' },
+                // '@media (maxWidth: 640px)': { padding: "0em 0.2em"}
               }}
             >
 
@@ -157,7 +157,7 @@ const ContactForm = () => {
                   </Grid>
                   <Grid item ml={3.5}
                     sx={{
-                      '@media (max-width:600px)': { marginLeft: 4 },
+                      '@media (maxWidth:600px)': { marginLeft: 4 },
                     }}
                   >
                     <FormControl>
@@ -202,7 +202,7 @@ const ContactForm = () => {
                   </Grid>
                   <Grid item ml={3.5}
                     sx={{
-                      '@media (max-width:600px)': { marginLeft: 2.7},
+                      '@media (maxWidth:600px)': { marginLeft: 2.7},
                     }}
                   >
                     <FormControl>

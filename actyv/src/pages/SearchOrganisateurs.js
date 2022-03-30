@@ -4,10 +4,10 @@ import { Typography, Box, Grid, Link } from '@mui/material';
 import Filters from '../components/Filters';
 import useContentful from "../useContentful";
 import ResultCardsOrganisateurs from '../components/ResultsCardsOrganisateurs';
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const SearchOrganisateurs = () => {
-    const { id } = useParams();
+    // const { id } = useParams();
     
     const [organisers, setOrganisers] = useState([]);
     const { getOrganisers } = useContentful();

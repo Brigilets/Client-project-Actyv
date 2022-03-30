@@ -10,21 +10,23 @@ const ActivityCard = ({activite}) =>{
   /*console.log(activite)*/
     return(
      
-        <Card sx={{ maxWidth: 345 }}>
+        <Card 
+          // sx={{ maxWidth: 345 }}
+        >
         <CardMedia
           component="img"
-          height="140"
+          height="250"
           image={activite?.photo.file.url}
           alt={activite.nom}
         />
-        <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left"}}>
-          <Typography gutterBottom variant="h5" className='raleway-typography' fontFamily="Raleway" component="div">
+        <CardContent sx={{backgroundColor:"#30C9B0", color:"white", textAlign:"left", height:"5em"}}>
+          <Typography gutterBottom variant="h6" className='raleway-typography' fontFamily="Raleway" component="div">
            { activite?.nom }
           </Typography>
     {  /*    <Typography variant="body2" color="text.secondary">
             {activite?.description}
     </Typography>*/}
-          <Typography variant="h5" component="p">
+          <Typography variant="h6" component="p">
             {activite?.prix}€
           </Typography>
         </CardContent>
