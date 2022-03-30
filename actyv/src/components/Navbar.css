@@ -15,3 +15,13 @@
 #text-decoration-none {
     text-decoration: none;
 }
+
+
+@media only screen and (max-width: 992px) {
+    .App-header{ display: none !important; }
+ }
+
+
+ @media only screen and (min-width: 992px) {
+    .Sidebar{ display: none !important; }
+ }
