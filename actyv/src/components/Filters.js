@@ -18,17 +18,19 @@ function Filters() {
     };
 
     const [date, setDate] = useState([]);
-  const form = useRef();
-
-
+    const form = useRef();
 
 
     return (
-
-
-        <Box
-            padding="4rem "
-            marginTop="5em">
+        <Box 
+        marginTop="5em"
+        padding="3rem 6rem"  
+        sx={{
+            '@media (max-width:768px)': { padding:"4rem" },
+            '@media (max-width:600px)': { padding:"4rem 3rem" },
+            '@media (max-width:440px)': { padding:"4rem 2rem"  },
+          }}
+        >
             <Typography
                 color="primary"
                 fontFamily="Caveat"
@@ -36,14 +38,17 @@ function Filters() {
                 fontSize="44px"
                 textAlign="start"
                 paddingBottom="2rem"
-
             >
                 Filtrer  vos recherches
             </Typography>
 
 
-            <Grid container spacing={2} style={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
-                <Grid item xs={12} sm={12} md={2} lg={2}  >
+            <Grid container spacing={1} columns={15}
+            style={{  
+                width:"100%", 
+                padding:"0" 
+            }}>
+                <Grid item xs={15} sm={15} md={5} lg={3}>
 
                     <FormControl fullWidth >
                         <InputLabel id="demo-simple-select-label">Langues</InputLabel>
@@ -61,7 +66,7 @@ function Filters() {
                     </FormControl>
 
                 </Grid>
-                <Grid item xs={12} sm={12} md={2} lg={2}>
+                <Grid item xs={15} sm={15} md={5} lg={3}>
                 <FormControl fullWidth >
                     <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
                         <DatePicker
@@ -78,7 +83,7 @@ function Filters() {
 
                 </Grid>
 
-                <Grid item xs={12} sm={12} md={2} lg={2}>
+                <Grid item xs={15} sm={15} md={5} lg={3}>
 
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Nombre de visiteurs</InputLabel>
@@ -95,10 +100,14 @@ function Filters() {
                             <MenuItem value={30}>4</MenuItem>
                             <MenuItem value={30}>5</MenuItem>
                             <MenuItem value={30}>6</MenuItem>
+                            <MenuItem value={30}>7</MenuItem>
+                            <MenuItem value={30}>8</MenuItem>
+                            <MenuItem value={30}>9</MenuItem>
+                            <MenuItem value={30}>10</MenuItem>
                         </Select>
                     </FormControl>
                 </Grid>
-                <Grid item xs={12} sm={12} md={2} lg={2}>
+                <Grid item xs={15} sm={15} md={5} lg={3}>
 
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Prix</InputLabel>
@@ -109,13 +118,16 @@ function Filters() {
                             label="Age"
                             onChange={handleChange}
                         >
-                            <MenuItem value={10}>5$</MenuItem>
-                            <MenuItem value={20}>10$</MenuItem>
-                            <MenuItem value={30}>20$</MenuItem>
+                            <MenuItem value={10}>50-80$</MenuItem>
+                            <MenuItem value={20}>80-110$</MenuItem>
+                            <MenuItem value={30}>110-140$</MenuItem>
+                            <MenuItem value={30}>140-170$</MenuItem>
+                            <MenuItem value={30}>170-200$</MenuItem>
+                            <MenuItem value={30}>200-230$</MenuItem>
                         </Select>
                     </FormControl>
                 </Grid>
-                <Grid item xs={12} sm={12} md={2} lg={2}>
+                <Grid item xs={15} sm={15} md={5} lg={3}>
 
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Communauté</InputLabel>
@@ -126,9 +138,14 @@ function Filters() {
                             label="Age"
                             onChange={handleChange}
                         >
-                            <MenuItem value={10}>Français</MenuItem>
-                            <MenuItem value={20}>Nerderlands</MenuItem>
-                            <MenuItem value={30}>English</MenuItem>
+                            <MenuItem value={10}>Afrique du Nord</MenuItem>
+                            <MenuItem value={10}>Afrique Subsaharienne</MenuItem>
+                            <MenuItem value={10}>Amérique Latine</MenuItem>
+                            <MenuItem value={20}>Brésil</MenuItem>
+                            <MenuItem value={20}>Turquie</MenuItem>
+                            <MenuItem value={20}>Asie</MenuItem>
+                            <MenuItem value={20}>Proche Orient</MenuItem>
+                            <MenuItem value={30}>Europe de l'Est</MenuItem>
                         </Select>
                     </FormControl>
 

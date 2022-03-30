@@ -4,7 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Grid, Button } from "@mui/material";
+import { Button } from "@mui/material";
 
 export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
   
@@ -48,16 +48,18 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
           <Typography mb={2} sx={{textAlign: 'justify'}}>
            {fullDay.map(activity => activity?.description)}
           </Typography>
-          {/* {fullDay.map(activity =>
-          <img src={activity.photoDesActivites.fields.file.url}/>)} */}
-          <Button
+
+          <a href="/reservation">
+            <Button
               variant="contained"
               color="secondary"
               size='medium'
-              sx={{ textTransform: "none", fontWeight: 800 }}
+              sx={{ textTransform: "none", fontWeight: 800, margin:"2em 0em" }}
             >
               S'inscrire aux prochaines séances
             </Button>
+          </a>
+          
         </AccordionDetails>
       </Accordion>
 

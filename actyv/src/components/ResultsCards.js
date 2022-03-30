@@ -11,7 +11,16 @@ import { Box, Grid } from '@mui/material';
 export default function ResultCards() {
     return (
         <Box 
-        className="box-formules" sx={{ flexGrow: 1 }} >
+        // className="box-formules" 
+        // marginTop="3em"
+        padding="3rem 6rem" 
+        sx={{ 
+            flexGrow: 1,
+            '@media (max-width:768px)': { padding:"4rem" },
+            '@media (max-width:600px)': { padding:"4rem 3rem" },
+            '@media (max-width:440px)': { padding:"4rem 2rem"  },
+        }} 
+        >
             <Typography className="title-formules"
              color="primary"
              fontFamily="Caveat"
@@ -97,8 +106,8 @@ export default function ResultCards() {
                     </Card>
                 </Grid>
             </Grid>
-            <Button sx={{ paddingTop:"3rem", float:"left"}}
-            color="tertiary" > Découvrir plus </Button>
+            {/* <Button sx={{ paddingTop:"3rem", float:"left"}}
+            color="tertiary" > Découvrir plus </Button> */}
         </Box>
 
     );

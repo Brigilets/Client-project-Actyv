@@ -143,7 +143,7 @@ const ContactForm = () => {
 
             <Grid container mt={3} 
               sx={{
-                '@media(min-width:1600px)' : { paddingLeft: '0.6em'  },
+                '@media(min-width:1600px)' : { paddingLeft: '0.6em' },
                 '@media (min-width:740px) and (max-width:900px)': { paddingLeft: '0.4em' },
                 // '@media (max-width: 640px)': { padding: "0em 0.2em"}
               }}

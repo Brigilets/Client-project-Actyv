@@ -6,7 +6,7 @@ function SearchResults() {
   return (
       <div>
       <Filters />
-   <ResultCards />
+      <ResultCards />
    </div>
   );
 }

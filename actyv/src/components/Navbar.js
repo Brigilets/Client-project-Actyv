@@ -120,7 +120,7 @@ const Navbar = () => {
 
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link  id="text-decoration-none" href="./organiser" textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Organisateurs</Typography></Link>
+              <Link  id="text-decoration-none" href="./organisateur" textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Organisateurs</Typography></Link>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
               <Link  id="text-decoration-none" href="./visiteur" textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Visiteurs</Typography></Link>
@@ -164,7 +164,7 @@ const Navbar = () => {
             onClick={handleCloseNavMenu}
             sx={{ my: 2, ml: 3 }}
           >
-            <Link id="text-decoration-none" href='./organiser' ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold'>Organisateurs</Typography>
+            <Link id="text-decoration-none" href='./organisateur' ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold'>Organisateurs</Typography>
             </Link>
           </Button>
 
