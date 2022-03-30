@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SidebarTest from "./components/SidebarTest";
 
 // Pages
 import Home from './pages/Home';
@@ -65,8 +66,16 @@ const App = () => {
       <Router>
       <div className="App">
         <header className="App-header">
-          <Navbar/>
+         <Navbar /> 
         </header>
+
+   <div className='Sidebar'>
+        <SidebarTest /> 
+        </div>
+
+        
+       
+
 
           <Routes>
             <Route exact path="/" element={ <Home /> } />

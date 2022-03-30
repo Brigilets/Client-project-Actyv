@@ -10,9 +10,11 @@ import ContactForm from '../components/ContactForm';
 import { Box } from '@mui/system';
 
 
+
 function Home() {
   return (
     <div>
+
       <Box sx={{margin:"10em 0em 0em 0em"}} >
         <img src={logo} width="340" height="340" alt='logo-2'/>
       </Box>
