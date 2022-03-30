@@ -103,69 +103,14 @@ const Organisers = () => {
           >
             Vos formules et activités
           </Typography>
-          <Accordions fullDay={fullDay} halfDay={halfDay} tailorMade={tailorMade} />
+          <Accordions fullDay={fullDay} halfDay={halfDay} tailorMade={tailorMade} id={id} />
         </Container>
       );
-      // <Container 
-      //   style={{ 
-      //     // padding: 5, 
-      //     // paddingBottom: 10,
-      //     maxWidth: '100%',
-      //     margin: '8em auto 3em',
-      //     width: '90%',
-      //   }}>
-      // <Typography
-      //   variant="h2"
-      //   color="primary"
-      //   textAlign="left"
-      //   mb={3}
-      //   sx={{ fontFamily: "Caveat" }}
-      // >
-      //   Organisateur
-      // </Typography>
-      // <OrganiserCard data-testid="organiser-card"  organiser={organisers[id]}/> 
-      // <Typography
-      //   variant="h2"
-      //   color="primary"
-      //   textAlign="left"
-      //   mt={10}
-      //   mb={5}
-      //   sx={{ fontFamily: "Caveat" }}
-      // >
-      //   Vos formules et activités
-      // </Typography>
-      // <Accordions />
-      // </Container>)
     }
   };
 
   return (
     <>{display()}</>
-    /*  <Container>
-      
-      <Typography
-        variant="h2"
-        color="primary"
-        textAlign="left"
-        mb={3}
-        sx={{ fontFamily: "Caveat" }}
-      >
-        Organisateur
-      </Typography>
-      <Organiser id={id}/>
-      <Typography
-        variant="h2"
-        color="primary"
-        textAlign="left"
-        mt={15}
-        mb={5}
-        sx={{ fontFamily: "Caveat" }}
-      >
-        Vos formules et activités
-      </Typography>
-
-      <Accordions />
-    </Container> */
   );
 };
 

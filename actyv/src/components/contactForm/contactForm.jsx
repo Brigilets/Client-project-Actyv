@@ -17,7 +17,6 @@ import {
 const ContactForm = () => {
   
   const form = useRef();
-  console.log(form)
 
   const sendEmail = (e) => {
     e.preventDefault();
