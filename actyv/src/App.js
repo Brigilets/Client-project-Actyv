@@ -92,7 +92,7 @@ const App = () => {
             <Route path='/organisateur/:id/profil' element={ <ProfilOrganisateur />} />
             <Route path="/visiteur" element={ <Visiteur /> } />
             <Route path="/profil_visiteur" element={ <ProfilVisiteur /> } />
-            <Route path="/reservation" element={ <ReservationVisiteur /> } />
+            <Route path="/reservation/:id" element={ <ReservationVisiteur /> } />
             <Route path='*' element={<Erreur />} />
           </Routes>
 

@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Button, ImageList, ImageListItem, Grid} from "@mui/material";
 
-export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
+export default function ControlledAccordions({fullDay, halfDay, tailorMade, id}) {
   
   const pictures = (fullDay[0]?.photoDesActivites)
   const picturesHalfday = (halfDay[0]?.photoDesActivites)
@@ -56,7 +56,7 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
           })}
           </ImageList ></Grid>
           
-          <a href="/reservation">
+          <a href={`/reservation/${id}`}>
             <Button
               variant="contained"
               color="secondary"
