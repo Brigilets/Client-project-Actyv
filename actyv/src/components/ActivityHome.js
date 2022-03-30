@@ -8,7 +8,7 @@ import "./ActivityCard.css"
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 
-const Activity = () =>{
+const ActivityHome = () =>{
   const [activites, setActivites] = useState([]);
   const { getActivites } = useActivities();
 
@@ -55,7 +55,7 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
        
      <Grid container spacing={2} style={{display:'flex', flexDirection: 'row'}} boxSizing="border-box">
     {
-     activites.map((activite, index) => 
+     activites.slice(0,4).map((activite, index) => 
   
      <Grid item  xs={12} sm={12} md={6} lg={3}>
      <ActivityCard  key={index} activite={activite}/>
@@ -64,11 +64,11 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
        
      )}
 
-{/*<Link href="/searchresults">
+<Link href="/searchresults">
                     <Button sx={{ margin:"3em 0em 0em", float:"left", fontFamily:"Caveat", fontSize:"20px" }} color="tertiary"> 
                         Découvrir plus 
                     </Button>
-                </Link>*/}
+                </Link>
      </Grid>
         </Box>
       </div>
@@ -76,4 +76,4 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
     }
 
 
-export default Activity
+export default ActivityHome
