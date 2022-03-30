@@ -1,13 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Button } from "@mui/material";
+import { Button, ImageList, ImageListItem, Grid} from "@mui/material";
 
 export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
   
+  const pictures = (fullDay[0]?.photoDesActivites)
+  const picturesHalfday = (halfDay[0]?.photoDesActivites)
+
   
   const [expanded, setExpanded] = React.useState(false);
 
@@ -48,7 +51,11 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
           <Typography mb={2} sx={{textAlign: 'justify'}}>
            {fullDay.map(activity => activity?.description)}
           </Typography>
-
+          <Grid container justifyContent='center'><ImageList sx={{ width: '80%', height: '60%' }} cols={3} rowHeight={270}>
+          {pictures?.map((picture, index) => { return <ImageListItem key={picture?.fields.file.url}> <img src={picture?.fields.file.url} alt='imageActivity' loading="lazy" style={{width: 'auto', height: '50%'}}/></ImageListItem>
+          })}
+          </ImageList ></Grid>
+          
           <a href="/reservation">
             <Button
               variant="contained"
@@ -79,6 +86,11 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade}) {
           <Typography sx={{textAlign: 'justify'}}>
           {halfDay.map(activity => activity?.description)}
           </Typography>
+
+          <Grid container justifyContent='center'><ImageList sx={{ width: '80%', height: '60%' }} cols={3} rowHeight={270}>
+          {picturesHalfday?.map((picture, index) => { return <ImageListItem key={picture?.fields.file.url}> <img src={picture?.fields.file.url} alt='imageActivity' loading="lazy" style={{width: 'auto', height: '50%'}}/></ImageListItem>
+          })}
+          </ImageList ></Grid>
         </AccordionDetails>
       </Accordion>
       

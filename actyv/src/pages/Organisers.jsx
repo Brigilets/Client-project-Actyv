@@ -33,8 +33,8 @@ const Organisers = () => {
 
   // fetching activities data by user
   const organiserActivities = []
-  activities.forEach((activity) => {
-    if (activity.emailOrganisateur === organisers[id].email) {organiserActivities.push(activity)};
+  activities?.forEach((activity) => {
+    if (activity?.emailOrganisateur === organisers[id]?.email) {organiserActivities.push(activity)};
   });
   
   // fetching activities for full day
