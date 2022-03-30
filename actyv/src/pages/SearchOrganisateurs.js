@@ -17,6 +17,9 @@ const SearchOrganisateurs = () => {
     getapi()
     }, []);
 
+   const p = organisers.map(o => o)
+   console.log(p)
+
     return ( 
         <div>
             <Filters />
@@ -43,7 +46,7 @@ const SearchOrganisateurs = () => {
                     {organisers.map((organiser, index) => 
                         {
                             return <Grid item xs={12} sm={12} md={6} lg={6}>
-                                <Link href={`/organisateur/${id}`} style={{textDecoration:"none"}}> 
+                                <Link href={`/organisateur/${organiser.id}`} style={{textDecoration:"none"}}> 
                                     <ResultCardsOrganisateurs key={index} organiser={organiser}/>
                                 </Link>
                             </Grid>;
