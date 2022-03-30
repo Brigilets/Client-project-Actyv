@@ -11,7 +11,7 @@ export const SidebarData = [
   },
   {
     title: 'Organisateurs',
-    path: '/organiser',
+    path: '/organisateur',
 
     cName: 'nav-text'
   },
@@ -21,5 +21,18 @@ export const SidebarData = [
 
     cName: 'nav-text'
   },
+  {
+    title: 'Inscription',
+    path: '/inscription',
+
+    cName: 'nav-text'
+  },
+  {
+    title: 'Connexion',
+    path: '/connexion',
+
+    cName: 'nav-text'
+  },
+
   
 ];
