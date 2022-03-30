@@ -26,9 +26,9 @@ function Filters() {
         marginTop="5em"
         padding="3rem 6rem"  
         sx={{
-            '@media (max-width:768px)': { padding:"4rem" },
-            '@media (max-width:600px)': { padding:"4rem 3rem" },
-            '@media (max-width:440px)': { padding:"4rem 2rem"  },
+            '@media (maxWidth:768px)': { padding:"4rem" },
+            '@media (maxWidth:600px)': { padding:"4rem 3rem" },
+            '@media (maxWidth:440px)': { padding:"4rem 2rem"  },
           }}
         >
             <Typography

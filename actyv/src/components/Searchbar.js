@@ -64,9 +64,9 @@ export default function Searchbar() {
             background: "linear-gradient(180deg, #ffffff 0%, var(--token-dbb08f27-7ee1-48fd-bd6a-2da0de62c852, rgb(248, 127, 73))",
             padding: "8em 0.5em 7em",
             boxShadow: "0px 0px",
-            '@media (min-width: 680px)': { padding:"8em 2em 7em" },
-            '@media (max-width: 680px)': { padding:"3em 2em" },
-            '@media (max-width: 380px)': { padding:"2zem 1em" },
+            '@media (minWidth: 680px)': { padding:"8em 2em 7em" },
+            '@media (maxWidth: 680px)': { padding:"3em 2em" },
+            '@media (maxWidth: 380px)': { padding:"2zem 1em" },
         }}
       >
         <Box>

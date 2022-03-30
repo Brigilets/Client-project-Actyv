@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Inscription from './pages/Inscription';
 import Connexion from './pages/Connexion';
 import SearchResults from './pages/SearchResults';
+import DétailsActivité from './pages/DétailsActivité'
 import SearchOrganisateurs from './pages/SearchOrganisateurs';
 import Organisers from './pages/Organisers';
 import ProfilOrganisateur from './pages/OrganisersProfil';
@@ -75,16 +76,13 @@ const App = () => {
    <div className='Sidebar'>
         <SidebarTest /> 
         </div>
-
-        
-       
-
-
           <Routes>
             <Route exact path="/" element={ <Home /> } />
-            <Route exact path="/formules" element={ <Home /> } />
+            {/* <Route exact path="/formules" element={ <Home /> } /> */}
 
             <Route path="/searchresults" element={ <SearchResults /> } />
+            <Route path="/searchresults/:id" element={ <DétailsActivité /> } />
+
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
             <Route path="/organisateur" element={ <SearchOrganisateurs /> } />
@@ -96,9 +94,6 @@ const App = () => {
             <Route path='*' element={<Erreur />} />
           </Routes>
 
-          {/* A inclure dans leurs pages respectives */}
-            {/* </Organiser> */}
-            {/* <Activity/> */}
         <footer>
           <Footer/>
         </footer>

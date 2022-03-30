@@ -15,9 +15,9 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
-import DatePicker from "@mui/lab/DatePicker";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
+// import DatePicker from "@mui/lab/DatePicker";
+// import AdapterDateFns from "@mui/lab/AdapterDateFns";
+// import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import useContentful from "../useContentful";
@@ -25,7 +25,7 @@ import useContentful from "../useContentful";
 const Reservation = () => {
   const navigate = useNavigate();
 
-  const [date, setDate] = useState([]);
+  // const [date, setDate] = useState([]);
   const form = useRef();
 
   const [activity, setActivity] = React.useState("");

@@ -44,7 +44,7 @@ const ProfilVisiteur = () => {
                 <Grid item xs={12} md={9}
                 sx={{
                     padding:"1em",
-                    '@media (max-width: 640px)': { padding: "0em 0.2em"},
+                    '@media (maxWidth: 640px)': { padding: "0em 0.2em"},
                     backgroundColor:"primary.lightest"
                   }}
                 >
