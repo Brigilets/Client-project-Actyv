@@ -18,6 +18,8 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade, id})
     setExpanded(isExpanded ? panel : false);
   };
 
+  console.log(tailorMade)
+
   const style = {
     accordion: {
       borderBottom: '3px solid #370665'
@@ -109,8 +111,9 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade, id})
         <AccordionDetails
         sx={{backgroundColor: 'rgb(49, 200, 177)'}}>
           <Typography>
-          {tailorMade.map(activity => activity.description)}
-          </Typography>
+          {(!tailorMade)? "Aucune activité sur-mesure n'est possible pour le moment" : tailorMade.map(activity => activity.descritpion)}
+{/*           {tailorMade.map(activity => {if(activity === '') {return "Aucune activité sur-mesure n'est possible pour le moment"} else{return activity.description}})}
+ */}          </Typography>
         </AccordionDetails>
       </Accordion>
 
