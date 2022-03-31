@@ -10,11 +10,6 @@ import Swipe from '../components/Swipe';
 import { Box } from '@mui/system';
 import ActivityHome from '../components/ActivityHome';
 
-
-
-
-
-
 function Home() {
   return (
     <div>
@@ -24,8 +19,8 @@ function Home() {
       </Box>
         <Searchbar />
         {/* <Swipe /> */}
-       {/*<Formules />*/}
-       <ActivityHome/>
+        {/*<Formules />*/}
+        <ActivityHome/>
         <AboutMe />
         <ContactForm />
         <HomeButtons />

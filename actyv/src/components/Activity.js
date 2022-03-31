@@ -48,7 +48,7 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
          boxSizing: "border-box",
          marginBottom:"4em",
          padding:"3rem 5rem",
-         '@media (maWidth: 768px)': { padding:"3rem 3rem" },
+         '@media (maxWidth: 768px)': { padding:"3rem 3rem" },
          '@media (maxWidth: 680px)': { padding:"3rem 2rem" },
          '@media (maxWidth: 380px)': { padding:"3rem 1rem" },
      }} >

@@ -116,20 +116,20 @@ const Navbar = () => {
             {/* Dropdown menu contents */}
 
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link  id="text-decoration-none" href="./searchresults" textAlign="center" fontFamily='Raleway' > <Typography color="secondary" fontWeight='bold' fontSize="14px">Formules et activités</Typography></Link>
+              <Link  id="text-decoration-none" href="/searchresults" textAlign="center" fontFamily='Raleway' > <Typography color="secondary" fontWeight='bold' fontSize="14px">Formules et activités</Typography></Link>
 
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link  id="text-decoration-none" href="./organisateur" textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Organisateurs</Typography></Link>
+              <Link  id="text-decoration-none" href="/organisateur" textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Organisateurs</Typography></Link>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link  id="text-decoration-none" href="./visiteur" textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Visiteurs</Typography></Link>
+              <Link  id="text-decoration-none" href="/visiteur" textAlign="center" fontFamily='Raleway'> <Typography color="secondary" fontWeight='bold' fontSize="14px">Visiteurs</Typography></Link>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link  id="text-decoration-none" href="./inscription" textAlign="center" fontFamily='Raleway' backgroundColor="secondary"> <Typography color="secondary" fontWeight='bold' fontSize="14px">S'inscrire</Typography></Link>
+              <Link  id="text-decoration-none" href="/inscription" textAlign="center" fontFamily='Raleway' backgroundColor="secondary"> <Typography color="secondary" fontWeight='bold' fontSize="14px">S'inscrire</Typography></Link>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link  id="text-decoration-none" href="./connexion" textAlign="center" fontFamily='Raleway' > <Typography color="secondary" fontWeight='bold' fontSize="14px">Se connecter</Typography></Link>
+              <Link  id="text-decoration-none" href="/connexion" textAlign="center" fontFamily='Raleway' > <Typography color="secondary" fontWeight='bold' fontSize="14px">Se connecter</Typography></Link>
             </MenuItem>
           </Menu>
         </Box>
@@ -155,7 +155,7 @@ const Navbar = () => {
             onClick={handleCloseNavMenu}
             sx={{ my: 2, ml: 3, width:"180px" ,textDecoration:"none" }}
           >
-            <Link id="text-decoration-none" href='./searchresults' ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold' textDecoration="none">Formules et activités</Typography>
+            <Link id="text-decoration-none" href='/searchresults' ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold' textDecoration="none">Formules et activités</Typography>
             </Link>
             
           </Button>
@@ -164,7 +164,7 @@ const Navbar = () => {
             onClick={handleCloseNavMenu}
             sx={{ my: 2, ml: 3 }}
           >
-            <Link id="text-decoration-none" href='./organisateur' ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold'>Organisateurs</Typography>
+            <Link id="text-decoration-none" href='/organisateur' ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold'>Organisateurs</Typography>
             </Link>
           </Button>
 
@@ -172,7 +172,7 @@ const Navbar = () => {
             onClick={handleCloseNavMenu}
             sx={{ my: 2, ml: 3 }}
           >
-            <Link id="text-decoration-none" href="./visiteur" ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold'>Visiteurs</Typography>
+            <Link id="text-decoration-none" href="/visiteur" ><Typography color="secondary" textTransform='none' fontSize='16px' fontWeight='bold'>Visiteurs</Typography>
             </Link>
           </Button>
         </Box>
