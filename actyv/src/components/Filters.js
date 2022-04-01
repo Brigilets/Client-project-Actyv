@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { Box, Grid, TextField, Typography } from '@mui/material';
+import React, { useRef, useState,useEffect } from "react";
+import { Box, Grid, TextField, Typography, Button } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -7,18 +7,49 @@ import Select from '@mui/material/Select';
 import DatePicker from '@mui/lab/DatePicker';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import useActivities from "../useActivities";
+import ActivityCard from "./ActivityCard";
 
 
 function Filters() {
+   
+    const [activites, setActivites] = useState([]);
+    const { getActivites } = useActivities();
+    useEffect(() => {
+        const getapi = () => {
+          getActivites().then((response) => setActivites(response));
+        };
+        getapi();
+      }, []);
 
-    const [age, setAge] = React.useState('');
+      const form = useRef();
+
+      const langue = []
+      activites?.forEach((activity) => {
+          if (form.langue === activites?.langue){
+              langue.push(activity)
+          } else {
+              return <Typography>Désolé aucune activité ne correspondent pas à votre recherche</Typography>
+          }
+      })
+     {/* const [langue, setLangue] = React.useState('');
+
+      const [visiteurs, setVisiteurs] = React.useState('');
+  
+      const [prix, setPrix] = React.useState('');
+      const [communaute, setCommunaute] = React.useState('');
 
     const handleChange = (event) => {
-        setAge(event.target.value);
-    };
+        setLangue(event.target.value);
+        setVisiteurs(event.target.value);
+        setPrix(event.target.value);
+        setCommunaute(event.target.value);
+    }; */}
 
-    const [date, setDate] = useState([]);
-    const form = useRef();
+
+
+   // const [date, setDate] = useState([]);
+   
 
 
     return (
@@ -55,9 +86,9 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
+                           // value={langue}
+                            label="Langue"
+                           // onChange={handleChange}
                         >
                             <MenuItem value={10}>Français</MenuItem>
                             <MenuItem value={20}>Nerderlands</MenuItem>
@@ -66,7 +97,8 @@ function Filters() {
                     </FormControl>
 
                 </Grid>
-                {/*<Grid item xs={15} sm={15} md={5} lg={3}>
+             {/*}   <Grid item xs={15} sm={15} md={5} lg={3}>
+                
                 <FormControl fullWidth >
                     <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
                         <DatePicker
@@ -81,7 +113,8 @@ function Filters() {
                     </LocalizationProvider>
                     </FormControl>
 
-                        </Grid> */}
+                </Grid>*/}
+                       
 
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 
@@ -90,9 +123,9 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
+                           // value={visiteurs}
+                            label="Visiteurs"
+                           // onChange={handleChange}
                         >
                             <MenuItem value={10}>1</MenuItem>
                             <MenuItem value={20}>2</MenuItem>
@@ -114,9 +147,9 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
+                           // value={prix}
+                            label="Prix"
+                            //onChange={handleChange}
                         >
                             <MenuItem value={10}>50-80$</MenuItem>
                             <MenuItem value={20}>80-110$</MenuItem>
@@ -134,9 +167,9 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
+                          //  value={communaute}
+                            label="communaute"
+                         //   onChange={handleChange}
                         >
                             <MenuItem value={10}>Afrique du Nord</MenuItem>
                             <MenuItem value={10}>Afrique Subsaharienne</MenuItem>
@@ -149,7 +182,19 @@ function Filters() {
                         </Select>
                     </FormControl>
 
+                    
+
                 </Grid>
+              
+              <Grid item>
+                <Button
+                  variant="contained"
+                  type={"submit"}
+                  sx={{ color: "white" }}
+                >
+                  Envoyez
+                </Button>
+         </Grid>
 
             </Grid>
 
