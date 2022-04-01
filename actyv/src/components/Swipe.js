@@ -17,22 +17,22 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: '',
+    label: '0',
     imgPath: 
        'https://images.unsplash.com/photo-1523689119443-df96632084a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80',
   },
   {
-    label: '',
+    label: '1',
     imgPath:
       'https://images.unsplash.com/photo-1645500498152-338584f9d61c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
   },
   {
-    label: '',
+    label: '2',
     imgPath:
       'https://images.unsplash.com/photo-1622279488670-123d0fd161cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
   },
   {
-    label: '',
+    label: '3',
     imgPath:
       'https://images.unsplash.com/photo-1602363557554-9962442a5c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
   },
@@ -81,7 +81,7 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  maxHeight: 600,
+                  height: '600px',
                   display: 'block',
                   minWidth: '100%',
                   overflow: 'hidden',

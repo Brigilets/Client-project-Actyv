@@ -1,5 +1,5 @@
 import React, { useRef, useState,useEffect } from "react";
-import { Box, Grid, TextField, Typography } from '@mui/material';
+import { Box, Grid, TextField, Typography, Button } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -8,10 +8,10 @@ import DatePicker from '@mui/lab/DatePicker';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import useActivities from "../useActivities";
+import ActivityCard from "./ActivityCard";
 
 
-function Filters({activite}) {
-
+function Filters() {
    
     const [activites, setActivites] = useState([]);
     const { getActivites } = useActivities();
@@ -22,7 +22,17 @@ function Filters({activite}) {
         getapi();
       }, []);
 
-      const [langue, setLangue] = React.useState('');
+      const form = useRef();
+
+      const langue = []
+      activites?.forEach((activity) => {
+          if (form.langue === activites?.langue){
+              langue.push(activity)
+          } else {
+              return <Typography>Désolé aucune activité ne correspondent pas à votre recherche</Typography>
+          }
+      })
+     {/* const [langue, setLangue] = React.useState('');
 
       const [visiteurs, setVisiteurs] = React.useState('');
   
@@ -34,11 +44,12 @@ function Filters({activite}) {
         setVisiteurs(event.target.value);
         setPrix(event.target.value);
         setCommunaute(event.target.value);
-    };
+    }; */}
+
 
 
    // const [date, setDate] = useState([]);
-    const form = useRef();
+   
 
 
     return (
@@ -75,9 +86,9 @@ function Filters({activite}) {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={langue}
+                           // value={langue}
                             label="Langue"
-                            onChange={handleChange}
+                           // onChange={handleChange}
                         >
                             <MenuItem value={10}>Français</MenuItem>
                             <MenuItem value={20}>Nerderlands</MenuItem>
@@ -112,9 +123,9 @@ function Filters({activite}) {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={visiteurs}
+                           // value={visiteurs}
                             label="Visiteurs"
-                            onChange={handleChange}
+                           // onChange={handleChange}
                         >
                             <MenuItem value={10}>1</MenuItem>
                             <MenuItem value={20}>2</MenuItem>
@@ -136,9 +147,9 @@ function Filters({activite}) {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={prix}
+                           // value={prix}
                             label="Prix"
-                            onChange={handleChange}
+                            //onChange={handleChange}
                         >
                             <MenuItem value={10}>50-80$</MenuItem>
                             <MenuItem value={20}>80-110$</MenuItem>
@@ -156,9 +167,9 @@ function Filters({activite}) {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={communaute}
+                          //  value={communaute}
                             label="communaute"
-                            onChange={handleChange}
+                         //   onChange={handleChange}
                         >
                             <MenuItem value={10}>Afrique du Nord</MenuItem>
                             <MenuItem value={10}>Afrique Subsaharienne</MenuItem>
@@ -171,7 +182,19 @@ function Filters({activite}) {
                         </Select>
                     </FormControl>
 
+                    
+
                 </Grid>
+              
+              <Grid item>
+                <Button
+                  variant="contained"
+                  type={"submit"}
+                  sx={{ color: "white" }}
+                >
+                  Envoyez
+                </Button>
+         </Grid>
 
             </Grid>
 

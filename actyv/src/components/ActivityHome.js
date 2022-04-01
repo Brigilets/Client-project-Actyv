@@ -53,10 +53,10 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
        
      <Grid container spacing={2} style={{display:'flex', flexDirection: 'row'}} boxSizing="border-box">
     {
-     activites.slice(0,4).map((activite, index) => 
+     activites.slice(0,4).map((activite, key) => 
   
      <Grid item  xs={12} sm={12} md={6} lg={3}>
-     <ActivityCard  key={index} activite={activite}/>
+     <ActivityCard  key={key} activite={activite}/>
      
      </Grid>
        
