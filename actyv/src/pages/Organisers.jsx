@@ -34,6 +34,7 @@ const Organisers = () => {
   const organiserActivities = []
   activities?.forEach((activity) => {
     if (activity?.emailOrganisateur === organisers[id]?.email) {organiserActivities.push(activity)};
+    console.log(organisers[id]?.nom);
   });
   
   // fetching activities for full day

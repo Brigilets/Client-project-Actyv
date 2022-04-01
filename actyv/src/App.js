@@ -81,7 +81,8 @@ const App = () => {
             {/* <Route exact path="/formules" element={ <Home /> } /> */}
 
             <Route path="/searchresults" element={ <SearchResults /> } />
-            <Route path="/searchresults/:id" element={ <DétailsActivité /> } />
+            <Route path="/searchresults/:nom" element={ <DétailsActivité /> } />
+            {/* <Route path="/searchresults/:id" element={ <DétailsActivité /> } /> */}
 
             <Route path="/inscription" element={ <Inscription /> } />
             <Route path="/connexion" element={ <Connexion /> } />
