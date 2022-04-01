@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { Box, Grid, TextField, Typography } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -7,17 +7,37 @@ import Select from '@mui/material/Select';
 import DatePicker from '@mui/lab/DatePicker';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import useActivities from "../useActivities";
 
 
-function Filters() {
+function Filters({activite}) {
 
-    const [age, setAge] = React.useState('');
+   
+    const [activites, setActivites] = useState([]);
+    const { getActivites } = useActivities();
+    useEffect(() => {
+        const getapi = () => {
+          getActivites().then((response) => setActivites(response));
+        };
+        getapi();
+      }, []);
+
+      const [langue, setLangue] = React.useState('');
+
+      const [visiteurs, setVisiteurs] = React.useState('');
+  
+      const [prix, setPrix] = React.useState('');
+      const [communaute, setCommunaute] = React.useState('');
 
     const handleChange = (event) => {
-        setAge(event.target.value);
+        setLangue(event.target.value);
+        setVisiteurs(event.target.value);
+        setPrix(event.target.value);
+        setCommunaute(event.target.value);
     };
 
-    const [date, setDate] = useState([]);
+
+   // const [date, setDate] = useState([]);
     const form = useRef();
 
 
@@ -55,8 +75,8 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
+                            value={langue}
+                            label="Langue"
                             onChange={handleChange}
                         >
                             <MenuItem value={10}>Français</MenuItem>
@@ -66,7 +86,7 @@ function Filters() {
                     </FormControl>
 
                 </Grid>
-                <Grid item xs={15} sm={15} md={5} lg={3}>
+             {/*}   <Grid item xs={15} sm={15} md={5} lg={3}>
                 <FormControl fullWidth >
                     <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
                         <DatePicker
@@ -81,7 +101,7 @@ function Filters() {
                     </LocalizationProvider>
                     </FormControl>
 
-                </Grid>
+                </Grid>*/}
 
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 
@@ -90,8 +110,8 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
+                            value={visiteurs}
+                            label="Visiteurs"
                             onChange={handleChange}
                         >
                             <MenuItem value={10}>1</MenuItem>
@@ -114,8 +134,8 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
+                            value={prix}
+                            label="Prix"
                             onChange={handleChange}
                         >
                             <MenuItem value={10}>50-80$</MenuItem>
@@ -134,8 +154,8 @@ function Filters() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
+                            value={communaute}
+                            label="communaute"
                             onChange={handleChange}
                         >
                             <MenuItem value={10}>Afrique du Nord</MenuItem>
