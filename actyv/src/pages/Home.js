@@ -18,7 +18,7 @@ function Home() {
         <img src={logo} width="340" height="340" alt='logo-2'/>
       </Box>
         <Searchbar />
-        {/* <Swipe /> */}
+         <Swipe />
         {/*<Formules />*/}
         <ActivityHome/>
         <AboutMe />
