@@ -66,7 +66,7 @@ function Filters() {
                     </FormControl>
 
                 </Grid>
-                <Grid item xs={15} sm={15} md={5} lg={3}>
+                {/*<Grid item xs={15} sm={15} md={5} lg={3}>
                 <FormControl fullWidth >
                     <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
                         <DatePicker
@@ -81,7 +81,7 @@ function Filters() {
                     </LocalizationProvider>
                     </FormControl>
 
-                </Grid>
+                        </Grid> */}
 
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 
