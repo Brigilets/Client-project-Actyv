@@ -41,17 +41,15 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
                 Formules / Activités proposées
             </Typography>
          <Box id="formules" className="box-formules" 
-     sx={{ 
-       
-         flexGrow: 1,
-     
-         boxSizing: "border-box",
-         marginBottom:"4em",
-         padding:"3rem 5rem",
-         '@media (max-width: 768px)': { padding:"3rem 3rem" },
-         '@media (max-width: 680px)': { padding:"3rem 2rem" },
-         '@media (max-width: 380px)': { padding:"3rem 1rem" },
-     }} >
+          sx={{            
+              flexGrow: 1,
+              boxSizing: "border-box",
+              marginBottom:"4em",
+              '@media (min-width: 768px)': { padding: '1rem 5rem' },
+              '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+              '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+              '@media (max-width: 380px)': { padding: '1rem 1rem' },
+          }} >
        
      <Grid container spacing={2} style={{display:'flex', flexDirection: 'row'}} boxSizing="border-box">
     {
@@ -64,11 +62,11 @@ return <ActivityCard data-testid="activity-card" activite={activites[id]} />
        
      )}
 
-<Link href="/searchresults">
-                    <Button sx={{ margin:"3em 0em 0em", float:"left", fontFamily:"Caveat", fontSize:"20px" }} color="tertiary"> 
-                        Découvrir plus 
-                    </Button>
-                </Link>
+      <Link href="/searchresults">
+          <Button sx={{ margin:"2em 1em 0em", float:"left", fontFamily:"Caveat", fontSize:"20px" }} color="tertiary"> 
+              Découvrir plus 
+          </Button>
+      </Link>
      </Grid>
         </Box>
       </div>

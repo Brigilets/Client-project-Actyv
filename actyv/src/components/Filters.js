@@ -43,13 +43,13 @@ function Filters({activite}) {
 
     return (
         <Box 
-        marginTop="5em"
-        padding="3rem 6rem"  
-        sx={{
-            '@media (maxWidth:768px)': { padding:"4rem" },
-            '@media (maxWidth:600px)': { padding:"4rem 3rem" },
-            '@media (maxWidth:440px)': { padding:"4rem 2rem"  },
-          }}
+        sx={{ 
+            '@media (min-width: 992px)': { padding: '8rem 5rem 5rem' },
+            '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem' },
+            '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+            '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+            '@media (max-width: 380px)': { padding: '1rem 1rem' },
+        }}
         >
             <Typography
                 color="primary"
@@ -87,6 +87,7 @@ function Filters({activite}) {
 
                 </Grid>
              {/*}   <Grid item xs={15} sm={15} md={5} lg={3}>
+                
                 <FormControl fullWidth >
                     <LocalizationProvider fullWidth  dateAdapter={AdapterDateFns}>
                         <DatePicker
@@ -102,6 +103,7 @@ function Filters({activite}) {
                     </FormControl>
 
                 </Grid>*/}
+                       
 
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 

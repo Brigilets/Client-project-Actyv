@@ -11,7 +11,7 @@ const OrganiserProfileCard = ({ organiser }) => {
 
   return (
     <Grid container>
-      <Grid item xs={12} md={4} >
+      <Grid item xs={12} sm={12} md={4} lg={4}>
         <CardMedia
           component="img"
           height="500em"
@@ -20,25 +20,21 @@ const OrganiserProfileCard = ({ organiser }) => {
         />
       </Grid>
 
-      <Grid item xs={12} md={8}
-      style={{
-        backgroundColor:"#6342AC33"
-      }}>
+      <Grid item xs={12} sm={12} md={8} lg={8}>
 
-        <Grid container p={3}
-        >
-          <Grid item xs={12}>
+        <Grid container padding="2em 0em">
+          <Grid item xs={12} >
               {/* Name section */}
               <Grid container mb={2}>
                 <Grid item mb={1} xs={12} sm={2}>
                     <Typography
                     color="secondary"
-                    sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
+                    sx={{ fontSize:"14px", textAlign: "center", fontWeight: 600 }}
                     >
                     Nom:
                     </Typography>
                 </Grid>
-                <Grid item mb={1} xs={12} sm={10}>
+                <Grid item xs={12} sm={10} style={{backgroundColor:"#6342AC33", padding: '0.5em', borderRadius:'3px'}}>
                     <TextField variant="standard" 
                     color="secondary"
                     fullWidth 
@@ -51,15 +47,15 @@ const OrganiserProfileCard = ({ organiser }) => {
               </Grid>
               {/* Role description */}
               <Grid container mb={2}>
-                  <Grid item mb={1} xs={12} sm={2}>
+                  <Grid item xs={12} sm={2}>
                       <Typography
                       color="secondary"
-                      sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
+                      sx={{ fontSize:"14px", textAlign: "center", fontWeight: 600 }}
                       >
                       Rôle:
                       </Typography>
                   </Grid>
-                  <Grid item xs={12} sm={10}>
+                  <Grid item xs={12} sm={10} style={{backgroundColor:"#6342AC33", padding: '0.5em', borderRadius:'3px'}}>
                       <TextField variant="standard" 
                       color="secondary"
                       fullWidth 
@@ -72,15 +68,15 @@ const OrganiserProfileCard = ({ organiser }) => {
               </Grid>
               {/* Interests section */}
               <Grid container mb={2}>
-                  <Grid item mb={1} xs={12} sm={2}>
+                  <Grid item xs={12} sm={2}>
                       <Typography
                       color="secondary"
-                      sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
+                      sx={{ fontSize:"14px", textAlign: "center", fontWeight: 600 }}
                       >
                       Intérêts:
                       </Typography>
                   </Grid>
-                  <Grid item xs={12} sm={10}>
+                  <Grid item xs={12} sm={10} style={{backgroundColor:"#6342AC33", padding: '0.5em', borderRadius:'3px'}}>
                       <TextField variant="standard" 
                       color="secondary"
                       fullWidth 
@@ -93,15 +89,15 @@ const OrganiserProfileCard = ({ organiser }) => {
               </Grid>
               {/* Languages section */}
               <Grid container mb={2}>
-                  <Grid item mb={1} xs={12} sm={2}>
+                  <Grid item xs={12} sm={2}>
                       <Typography
                       color="secondary"
-                      sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
+                      sx={{ fontSize:"14px", textAlign: "center", fontWeight: 600 }}
                       >
                       Langue(s):
                       </Typography>
                   </Grid>
-                  <Grid item xs={12} sm={10}>
+                  <Grid item xs={12} sm={10} style={{backgroundColor:"#6342AC33", padding: '0.5em', borderRadius:'3px'}}>
                       <TextField variant="standard" 
                       color="secondary"
                       fullWidth 
@@ -114,15 +110,16 @@ const OrganiserProfileCard = ({ organiser }) => {
               </Grid>
               {/* Bio section */}
               <Grid container mb={2}>
-                  <Grid item mb={1} xs={12} sm={2}>
+                  <Grid item xs={12} sm={2}>
                       <Typography
                       color="secondary"
-                      sx={{ fontStyle: "italic", textAlign: "left", fontWeight: 600 }}
+                      sx={{ fontSize:"14px", textAlign: "center", fontWeight: 600 }}
                       >
                       Bio:
                       </Typography>
                   </Grid>
-                  <Grid item xs={12} sm={12}>
+                  <Grid item xs={12} sm={10} style={{backgroundColor:"#6342AC33", padding: '0.5em', borderRadius:'3px'}}>
+                    <Typography sx={{ textAlign: "justify" }}>
                       <TextField variant="standard" 
                       color="secondary"
                       fullWidth 
@@ -130,8 +127,10 @@ const OrganiserProfileCard = ({ organiser }) => {
                       id="Description" 
                       multiline
                       value={organiser?.description}
-                      sx={{ textAlign: "justify" }}
+                      sx={{ textAlign: "justify", lineHeight:"1.5" }}
+                      InputProps={{ textAlign: "justify", lineHeight:"1.5" }}
                       />
+                    </Typography>
                   </Grid>
               </Grid>
           </Grid>

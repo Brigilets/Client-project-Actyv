@@ -18,6 +18,8 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade, id})
     setExpanded(isExpanded ? panel : false);
   };
 
+  console.log(tailorMade)
+
   const style = {
     accordion: {
       borderBottom: '3px solid #370665'
@@ -36,6 +38,7 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade, id})
 
       {/* ACCORDEON 1 */}
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} sx={style.accordion}>
+        
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
@@ -46,15 +49,35 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade, id})
             Formule 1 - Une journée complète
           </Typography>
         </AccordionSummary>
+        
         <AccordionDetails
-        sx={{backgroundColor: 'rgb(49, 200, 177)'}}>
+          sx={{backgroundColor: 'rgb(49, 200, 177)'}}>
+
           <Typography mb={2} sx={{textAlign: 'justify'}}>
            {fullDay.map(activity => activity?.description)}
           </Typography>
-          <Grid container justifyContent='center'><ImageList sx={{ width: '80%', height: '60%' }} cols={3} rowHeight={270}>
-          {pictures?.map((picture, index) => { return <ImageListItem key={picture?.fields.file.url}> <img src={picture?.fields.file.url} alt='imageActivity' loading="lazy" style={{width: 'auto', height: '50%'}}/></ImageListItem>
-          })}
-          </ImageList ></Grid>
+
+          <Grid container justifyContent='center' spacing={1}>
+            {/* <Grid item sx={{ width: '100%', height: '60%' }} cols={3} rowHeight={270}> */}
+              {pictures?.map((picture, index) => { 
+                return <Grid item xs={12} sm={6} md={4}
+                key={picture?.fields.file.url}> 
+                  <img src={picture?.fields.file.url} alt='imageActivity' loading="lazy" 
+                    style={{width: '100%', height: '100%'}}
+                  />
+                </Grid>
+              })}
+            {/* </Grid > */}
+          </Grid>
+          {/* <Grid container justifyContent='center'>
+            <ImageList sx={{ width: '80%', height: '60%' }} cols={3} rowHeight={270}>
+              {pictures?.map((picture, index) => { 
+                return <ImageListItem key={picture?.fields.file.url}> 
+                  <img src={picture?.fields.file.url} alt='imageActivity' loading="lazy" style={{width: 'auto', height: '50%'}}/>
+                </ImageListItem>
+              })}
+            </ImageList >
+          </Grid> */}
           
           <a href={`/reservation/${id}`}>
             <Button
@@ -109,8 +132,9 @@ export default function ControlledAccordions({fullDay, halfDay, tailorMade, id})
         <AccordionDetails
         sx={{backgroundColor: 'rgb(49, 200, 177)'}}>
           <Typography>
-          {tailorMade.map(activity => activity.description)}
-          </Typography>
+          {(!tailorMade)? "Aucune activité sur-mesure n'est possible pour le moment" : tailorMade.map(activity => activity.descritpion)}
+{/*           {tailorMade.map(activity => {if(activity === '') {return "Aucune activité sur-mesure n'est possible pour le moment"} else{return activity.description}})}
+ */}          </Typography>
         </AccordionDetails>
       </Accordion>
 

@@ -23,15 +23,15 @@ const SearchOrganisateurs = () => {
     return ( 
         <div>
             <Filters />
-
             <Box 
-            padding="3rem 6rem" 
             sx={{ 
-                flexGrow: 1,
-                '@media (max-width:768px)': { padding:"4rem" },
-                '@media (max-width:600px)': { padding:"4rem 3rem" },
-                '@media (max-width:440px)': { padding:"4rem 2rem"  },
-            }} 
+                marginBottom: '5rem',
+                '@media (min-width: 992px)': { padding: '1rem 5rem' },
+                '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem'},
+                '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+                '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+                '@media (max-width: 380px)': { padding: '1rem 1rem' },
+            }}
             >
                 <Typography className="title-formules"
                     color="primary"
@@ -43,15 +43,13 @@ const SearchOrganisateurs = () => {
                     Résultats selon vos recherches
                 </Typography>
                 <Grid container spacing={2}>
-                    {organisers.map((organiser, index) => 
-                        {
-                            return <Grid item xs={12} sm={12} md={6} lg={6}>
-                                <Link href={`/organisateur/${organiser.id}`} style={{textDecoration:"none"}}> 
-                                    <ResultCardsOrganisateurs key={index} organiser={organiser}/>
-                                </Link>
-                            </Grid>;
-                        }
-                    )} 
+                    {organisers.map((organiser, index) => {
+                        return <Grid item xs={12} sm={12} md={6} lg={6}>
+                            <Link href={`/organisateur/${organiser.id}`} style={{textDecoration:"none"}}> 
+                                <ResultCardsOrganisateurs key={index} organiser={organiser}/>
+                            </Link>
+                        </Grid>;
+                    })} 
                 </Grid>
             </Box>
         </div>

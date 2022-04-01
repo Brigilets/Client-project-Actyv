@@ -1,4 +1,4 @@
-import { Container, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import React, { useState, useEffect } from "react";
 // import Organiser from "../components/Organiser";
 import useContentful from "../useContentful";
@@ -28,7 +28,6 @@ const Organisers = () => {
     };
     getapi();
   }, []);
-
 
 
   // fetching activities data by user
@@ -72,13 +71,16 @@ const Organisers = () => {
       );
     } else {
       return (
-        <Container 
+        <Box 
           // sx={{ padding: 5, paddingBottom: 10 }}
-          style={{ 
-            maxWidth: '100%',
-            margin: '8em auto 3em',
-            width: '90%',
-          }}
+          sx={{ 
+            marginBottom: '5rem',
+            '@media (min-width: 992px)': { padding: '8rem 5rem 5rem' },
+            '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem'},
+            '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+            '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+            '@media (max-width: 380px)': { padding: '1rem 1rem' },
+        }}
         >
           <Typography
             variant="h2"
@@ -104,7 +106,7 @@ const Organisers = () => {
             Vos formules et activités
           </Typography>
           <Accordions fullDay={fullDay} halfDay={halfDay} tailorMade={tailorMade} id={id} />
-        </Container>
+        </Box>
       );
     }
   };

@@ -1,35 +1,67 @@
-import { Grid, Box, Container, Typography } from '@mui/material';
+import {Box, Typography } from '@mui/material';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
-const Détails = ({activite}) => {
+const Détails = ({activity}) => {
+
     return ( 
-        <Container 
-            style={{ 
-            maxWidth: '100%',
-            '@media (minWidth: 992px)': { margin:"8em auto" },
-            '@media (maxWidth: 992px)': { margin:"3em auto" },
-            width: '90%',
+        <Box 
+        sx={{ 
+            marginBottom: '5rem',
+            '@media (min-width: 992px)': { padding: '8rem 5rem 5rem' },
+            '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem' },
+            '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+            '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+            '@media (max-width: 380px)': { padding: '1rem 1rem' },
         }}> 
-        <Card>
-            <CardMedia
-            component="img"
-            height="400"
-            image={activite?.photo.file.url}
-            alt={activite?.nom}
-            />
-        </Card>
             <Typography 
-            color="primary"
-            fontFamily="Caveat"
+                color="primary"
+                fontFamily="Caveat"
+                fontWeight={600}
+                fontSize="44px"
+                textAlign="start"
+                display="block"
+                padding="0.5em 0em"
+                >
+                {activity?.nom}
+            </Typography>
+
+            <Card>
+                <CardMedia
+                component="img"
+                height="500"
+                image={activity?.photo.file.url}
+                alt={activity?.nom}
+                />
+            </Card>
+            <br />
+            <Typography 
+            color="secondary"
             fontWeight={600}
-            fontSize="44px"
             textAlign="start"
             display="block"
             padding="0.5em 0em"
             >
-                {activite?.nom}
+                Pour plus d'infos : {activity?.emailOrganisateur}
+            </Typography>
+            <Typography 
+            color="secondary"
+            fontWeight={600}
+            textAlign="start"
+            display="block"
+            padding="0.5em 0em"
+            >
+                Communauté : {activity?.communaute}
+            </Typography>
+            
+            <Typography 
+            color="secondary"
+            fontWeight={600}
+            textAlign="start"
+            display="block"
+            padding="0.5em 0em"
+            >
+                Langue : {activity?.langue}
             </Typography>
 
             <Typography 
@@ -39,16 +71,7 @@ const Détails = ({activite}) => {
             display="block"
             padding="0.5em 0em"
             >
-                {activite?.emailOrganisateur}
-            </Typography>
-            <Typography 
-            color="secondary"
-            fontWeight={600}
-            textAlign="start"
-            display="block"
-            padding="0.5em 0em"
-            >
-                {activite?.prix} euros
+                Prix : {activity?.prix} euros
             </Typography>
 
             <Typography 
@@ -69,22 +92,10 @@ const Détails = ({activite}) => {
             display="block"
             padding="0.5em 0em"
             >
-                {activite?.description}
+                {activity?.description}
             </Typography>
 
-
-            <Typography 
-            color="primary"
-            fontFamily="Caveat"
-            fontWeight={600}
-            fontSize="44px"
-            textAlign="start"
-            display="block"
-            padding="0.5em 0em"
-            >
-                Photos
-            </Typography>
-        </Container>
+        </Box>
      );
 }
  
