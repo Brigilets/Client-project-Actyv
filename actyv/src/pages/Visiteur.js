@@ -17,12 +17,13 @@ import Button from '@mui/material/Button';
 const Visiteur = () => {
     return ( 
         <div>
-        <Container
-            style = {{
-                padding:'0',
-                maxWidth: '100%',
-                margin: '8em auto 1em',
-                width: '90%',
+        <Box
+            sx={{ 
+                '@media (min-width: 992px)': { padding: '8rem 5rem 5rem' },
+                '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem' },
+                '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+                '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+                '@media (max-width: 380px)': { padding: '1rem 1rem' },
             }}
         >
             <Typography fontSize="44px" fontWeight="600" color="primary" fontFamily="Caveat" textAlign="left" mb={3}>
@@ -32,7 +33,7 @@ const Visiteur = () => {
 
             <Grid container>
                 {/* Photo container */}
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={4}>
                     <Card>
                         <CardMedia
                             component="img"
@@ -42,7 +43,7 @@ const Visiteur = () => {
                         />
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={9} backgroundColor="secondary.light"
+                <Grid item xs={12} md={8} backgroundColor="secondary.light"
                 sx={{
                     padding:"1em 2em",
                     '@media (maxWidth: 640px)': { padding: "0em 0.2em"}
@@ -105,7 +106,7 @@ const Visiteur = () => {
                         </Grid>
                     </Grid>
                     {/* Bio container */}
-                    <Grid container padding="0.5em 0em" borderBottom="solid 1px #6342AC70">
+                    <Grid container padding="0.5em 0em">
                         <Grid item padding="0.5em" xs={12} sm={2}>
                             <Typography color="secondary" fontWeight="bold" fontSize="14px"> Bio </Typography>
                         </Grid>
@@ -132,14 +133,16 @@ const Visiteur = () => {
                     </Link>
                 </Box>
             </Grid>
-        </Container>
-        <Container
-            style = {{
-                padding:'0',
-                maxWidth: '100%',
-                margin: '1em auto',
-                width: '90%',
-            }}
+        </Box>
+        <Box
+            sx={{ 
+                marginBottom: '5rem',
+                '@media (min-width: 992px)': { padding: '1rem 5rem' },
+                '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem'},
+                '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+                '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+                '@media (max-width: 380px)': { padding: '1rem 1rem' },
+              }}
         >
             <Typography fontSize="44px" fontWeight="600" color="primary" fontFamily="Caveat" textAlign="left" mb={3}>
                 Formules et activités réalisées
@@ -188,8 +191,8 @@ const Visiteur = () => {
             </Grid>
             {/* <br /> <br /> */}
             {/* <ActivityVisiteur/> */}
-        </Container>
-        <Container
+        </Box>
+        {/* <Container
         style = {{
             padding:'0',
             maxWidth: '100%',
@@ -197,11 +200,7 @@ const Visiteur = () => {
             width: '90%',
         }}
         >
-            <Typography fontSize="44px" fontWeight="600" color="primary" fontFamily="Caveat" textAlign="left" mb={3}>
-            {" "}
-                Photos
-            </Typography>
-        </Container>
+        </Container> */}
         {/* <Reservation/> */}
         </div>
         

@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {
   Box,
-  Container,
   Grid,
   TextField,
   Typography,
@@ -62,13 +61,13 @@ const ContactForm = () => {
   };
 
   return (
-    <Container id="contact"
-      style = {{
-        padding:'0',
-        maxWidth: '100%',
-        margin: '3em auto',
-        width: '90%',
-    }}
+    <Box id="contact"
+      sx={{
+          '@media (min-width: 768px)': { padding: '1rem 5rem' },
+          '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+          '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+          '@media (max-width: 380px)': { padding: '1rem 1rem' },
+      }} 
     >
       <Box component="form" ref={form} noValidate onSubmit={sendEmail} mt={3} mb={3}>
         <Typography fontSize="44px" fontWeight="600" color="primary" fontFamily="Caveat" textAlign="left" mb={3}>
@@ -320,7 +319,7 @@ const ContactForm = () => {
           Envoyez
         </Button>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

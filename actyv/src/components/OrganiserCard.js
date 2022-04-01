@@ -70,7 +70,7 @@ const OrganiserCard = ({ organiser }) => {
                 size='medium'
                 sx={{ textTransform: "none", fontWeight: 800}}
               >
-                Modifier ton profil
+                Modifier votre profil
               </Button>
             </Link>
           </Grid>

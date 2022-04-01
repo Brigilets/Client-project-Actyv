@@ -1,10 +1,7 @@
-import { Container, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import React, {useState, useEffect } from "react";
 import OrganiserProfileCard from "../components/OrganiserProfileCard";
 import useContentful from "../useContentful";
-// import useActivities from "../useActivities"
-// import Accordions from "../components/Accordion";
-// import OrganiserCard from '../components/OrganiserCard';
 import {useParams} from 'react-router-dom'
 
 const ProfilOrganisateur = () => {
@@ -12,18 +9,11 @@ const ProfilOrganisateur = () => {
 
   const [organisers, setOrganisers] = useState([]);
   const { getOrganisers } = useContentful();
-  // const [activities, setActivities] = useState([])
-  // const {getActivites} = useActivities()
 
   useEffect(() => {
     const getapi = () => {getOrganisers().then((response) => setOrganisers(response))};
     getapi()
    }, []);
-
-  // useEffect(() => {
-  //   const getapi = () => {getActivites().then((response) => setActivities(response))};
-  //   getapi()
-  //  }, []);
 
    const display = () => {
     if (!(organisers[id])){
@@ -33,67 +23,34 @@ const ProfilOrganisateur = () => {
         </Grid>)
     } else {
       return (
-      <Container 
-        style={{ 
-          maxWidth: '100%',
-          margin: '8em auto 3em',
-          width: '90%',
-        }}>
-      <Typography
-        variant="h2"
-        color="primary"
-        textAlign="left"
-        mb={3}
-        sx={{ fontFamily: "Caveat" }}
-      >
-        Organisateur
-        {/* {organiser?.role} */}
-
-      </Typography>
-      {/* <OrganiserCard data-testid="organiser-card"  organiser={organisers[id]}/>  */}
-      <OrganiserProfileCard data-testid="organiser-card" organiser={organisers[id]}/> 
-      {/* <Typography
-        variant="h2"
-        color="primary"
-        textAlign="left"
-        mt={10}
-        mb={5}
-        sx={{ fontFamily: "Caveat" }}
-      >
-        Vos formules et activités
-      </Typography>
-      <Accordions /> */}
-      </Container>)
+        <Box 
+          sx={{ 
+            marginBottom: '5rem',
+            '@media (min-width: 992px)': { padding: '8rem 5rem 5rem' },
+            '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem' },
+            '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+            '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+            '@media (max-width: 380px)': { padding: '1rem 1rem' },
+        }}> 
+          <Typography
+            variant="h2"
+            color="primary"
+            textAlign="left"
+            mb={3}
+            sx={{ fontFamily: "Caveat" }}
+          >
+            Organisateur
+          </Typography>
+  
+          <OrganiserProfileCard data-testid="organiser-card" organiser={organisers[id]}/> 
+        
+        </Box>
+      )
     }
   }
 
   return (
     <>{display()}</>
-   /*  <Container>
-      
-      <Typography
-        variant="h2"
-        color="primary"
-        textAlign="left"
-        mb={3}
-        sx={{ fontFamily: "Caveat" }}
-      >
-        Organisateur
-      </Typography>
-      <Organiser id={id}/>
-      <Typography
-        variant="h2"
-        color="primary"
-        textAlign="left"
-        mt={15}
-        mb={5}
-        sx={{ fontFamily: "Caveat" }}
-      >
-        Vos formules et activités
-      </Typography>
-
-      <Accordions />
-    </Container> */
   );
 };
 

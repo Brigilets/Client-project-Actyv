@@ -1,15 +1,18 @@
-import { Grid, Container, Typography, ImageList, ImageListItem } from '@mui/material';
+import {Box, Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 
-const Détails = ({activite}) => {
+const Détails = ({activity}) => {
 
     return ( 
-        <Container 
+        <Box 
         sx={{ 
-            maxWidth: '100%',
-            margin: { sm:'0em auto', md:'5.5em auto' },
-            width: '90%',
+            marginBottom: '5rem',
+            '@media (min-width: 992px)': { padding: '8rem 5rem 5rem' },
+            '@media (min-width: 768px) and (max-width: 992px)': { padding: '1rem 5rem' },
+            '@media (min-width: 680px) and (max-width: 768px)': { padding: '1rem 3rem' },
+            '@media (min-width: 380px) and (max-width: 680px)': { padding: '1rem 2rem' },
+            '@media (max-width: 380px)': { padding: '1rem 1rem' },
         }}> 
             <Typography 
                 color="primary"
@@ -20,18 +23,18 @@ const Détails = ({activite}) => {
                 display="block"
                 padding="0.5em 0em"
                 >
-                {activite?.nom}
+                {activity?.nom}
             </Typography>
 
             <Card>
                 <CardMedia
                 component="img"
-                height="50%"
-                image={activite?.photo.file.url}
-                alt={activite?.nom}
+                height="500"
+                image={activity?.photo.file.url}
+                alt={activity?.nom}
                 />
             </Card>
-
+            <br />
             <Typography 
             color="secondary"
             fontWeight={600}
@@ -39,7 +42,7 @@ const Détails = ({activite}) => {
             display="block"
             padding="0.5em 0em"
             >
-                Pour plus d'infos : {activite?.emailOrganisateur}
+                Pour plus d'infos : {activity?.emailOrganisateur}
             </Typography>
             <Typography 
             color="secondary"
@@ -48,7 +51,7 @@ const Détails = ({activite}) => {
             display="block"
             padding="0.5em 0em"
             >
-                Communauté : {activite?.communaute}
+                Communauté : {activity?.communaute}
             </Typography>
             
             <Typography 
@@ -58,7 +61,7 @@ const Détails = ({activite}) => {
             display="block"
             padding="0.5em 0em"
             >
-                Langue : {activite?.langue}
+                Langue : {activity?.langue}
             </Typography>
 
             <Typography 
@@ -68,7 +71,7 @@ const Détails = ({activite}) => {
             display="block"
             padding="0.5em 0em"
             >
-                Prix : {activite?.prix} euros
+                Prix : {activity?.prix} euros
             </Typography>
 
             <Typography 
@@ -89,59 +92,10 @@ const Détails = ({activite}) => {
             display="block"
             padding="0.5em 0em"
             >
-                {activite?.description}
+                {activity?.description}
             </Typography>
 
-
-            {/* <Typography 
-            color="primary"
-            fontFamily="Caveat"
-            fontWeight={600}
-            fontSize="44px"
-            textAlign="start"
-            display="block"
-            padding="0.5em 0em"
-            >
-                Photos
-            </Typography> */}
-
-            {/* {activite?.map((photo, index) => {
-                return 
-                <Card>
-                    <CardMedia
-                    component="img"
-                    height="50%"
-                    image={photo?.photoDesActivites}
-                    alt={activite?.nom}
-                    />
-                </Card>
-            })} */}
-            
-
-            {/* {activite?.photoDesActivites} */}
-
-
-            {/* <Grid container justifyContent='center'><ImageList sx={{ width: '80%', height: '60%' }} cols={3} rowHeight={270}>
-                <Typography mb={2} sx={{textAlign: 'justify'}}>
-                    {fullDay.map(activity => activity?.description)}
-                </Typography>
-                {pictures?.map((picture, index) => { 
-                    return <ImageListItem key={picture?.fields.file.url}> 
-                        <img src={picture?.fields.file.url} alt='imageActivity' loading="lazy" style={{width: 'auto', height: '50%'}}/>
-                    </ImageListItem>
-                })}
-            </ImageList >
-            </Grid> */}
-            {/* <Grid container justifyContent='center'><ImageList sx={{ width: '80%', height: '60%' }} cols={3} rowHeight={270}>
-                {picturesHalfday?.map((picture, index) => { 
-                    return <ImageListItem key={picture?.fields.file.url}> 
-                        <img src={picture?.fields.file.url} alt='imageActivity' loading="lazy" style={{width: 'auto', height: '50%'}}/>
-                    </ImageListItem>
-                    }
-            )}
-                </ImageList >
-            </Grid> */}
-        </Container>
+        </Box>
      );
 }
  
