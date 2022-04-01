@@ -45,17 +45,10 @@ const ActivityHome = () =>{
        
      <Grid container spacing={2} style={{display:'flex', flexDirection: 'row'}} boxSizing="border-box">
     {
-<<<<<<< HEAD
-     activites.slice(0,4).map((activite, key) => 
-  
-     <Grid item  xs={12} sm={12} md={6} lg={3}>
-     <ActivityCard  key={key} activite={activite}/>
-=======
      activities.slice(0,4).map((activity, index) => 
   
      <Grid item  xs={12} sm={12} md={6} lg={3}>
      <ActivityCard  key={index} activity={activity}/>
->>>>>>> 966a4cc2bb9858485ec81f5c9b9292dd3e350c66
      
      </Grid>
        
