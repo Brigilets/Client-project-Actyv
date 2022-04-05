@@ -22,9 +22,10 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import useContentful from "../useContentful";
 
+
 const Reservation = () => {
   const navigate = useNavigate();
-
+const [send, setSend] = useState(false)
   // const [date, setDate] = useState([]);
   const form = useRef();
 
@@ -52,6 +53,7 @@ const Reservation = () => {
           console.log(error.text);
         }
       );
+      setSend(true);
   };
 
   // find the organizer
@@ -71,8 +73,11 @@ const Reservation = () => {
   const name = organisers[id]?.nom;
 
   return (
+  
     <div>
       <Container>
+      
+   {(send===false)?
         <Box
           component="form"
           ref={form}
@@ -453,7 +458,8 @@ const Reservation = () => {
               Annuler
             </Button>
           </Grid>
-        </Box>
+        </Box> : <Typography mt={7} color='secondary' sx={{fontSize: '1.5rem', fontFamily: 'Raleway', fontWeight: 600, height: '35vh' }}>Merci pour votre intérêt. Nous revenons vers vous le plus vite possible ! </Typography>}
+       
       </Container>
     </div>
   );

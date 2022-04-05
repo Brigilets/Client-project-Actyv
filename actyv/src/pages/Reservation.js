@@ -12,6 +12,7 @@ const ReservationVisiteur = () => {
                     maxWidth: '100%',
                     margin: '10em auto',
                     width: '90%',
+                   
                 }}
             >
                 <Typography fontSize="44px" fontWeight="600" color="primary" fontFamily="Caveat" textAlign="left" mb={3}>

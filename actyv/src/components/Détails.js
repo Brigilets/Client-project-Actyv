@@ -51,7 +51,7 @@ const Détails = ({activity}) => {
             display="block"
             padding="0.5em 0em"
             >
-                Communauté : {activity?.communaute}
+                Communauté : {activity?.communaut}
             </Typography>
             
             <Typography 
