@@ -28,6 +28,7 @@ function Filters() {
       activites?.forEach((activity) => {
           if (form.langue === activites?.langue){
               langue.push(activity)
+              return activity
           } else {
               return <Typography>Désolé aucune activité ne correspondent pas à votre recherche</Typography>
           }
