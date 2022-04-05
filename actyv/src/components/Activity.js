@@ -27,7 +27,8 @@ const Activity = () =>{
 
   // const p = activities.map(o => o)
   // console.log(p)
-
+  
+  
   return(
       <Box 
         sx={{ 
@@ -66,10 +67,12 @@ const Activity = () =>{
           const result = array.reverse().map(item => item)
           console.log(result) */}
           <Grid container spacing={2} style={{display:'flex', flexDirection: 'row'}} boxSizing="border-box">
-            { activities.slice(0).reverse().map((activity, nom) => {
+
+            { activities.slice().reverse().map((activity, index) => {
               return <Grid item xs={12} sm={12} md={6} lg={3}>
-                  <Link href={`/searchresults/${activity?.id}`} sx={{ textDecoration:"none" }}>
-                    <ActivityCard key={activity?.id} activity={activity}/>
+                  <Link href={`/searchresults/${activity.id}`} sx={{ textDecoration:"none" }}>
+                    <ActivityCard key={index} activity={activity}/>
+
                   </Link>
               </Grid> 
             })}

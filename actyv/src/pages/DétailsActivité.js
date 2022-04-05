@@ -10,7 +10,6 @@ import Détails from '../components/Détails';
 
 const DétailsActivité = () => {
     const { id } = useParams()
-    const { nom } = useParams()
 
     const [activities, setActivities] = useState([]);
     const { getActivites } = useActivities();
@@ -24,11 +23,15 @@ const DétailsActivité = () => {
         // console.log(activities[nom]);
     }, []);
 
+
+    const array = []
+    activities.forEach(activity => {if (activity.id == id) {array.push(activity)}})
+
     return (
         // <>{display()}</>
         
             <div>
-                <Détails data-testid="activity-card" activity={activities[nom]}/>
+                <Détails data-testid="activity-card" activity={array[0]}/>
             </div>
         
       );

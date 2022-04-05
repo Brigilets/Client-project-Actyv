@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import './ActivityCard.css'
 
 const ActivityCard = ({ activity }) =>{
-  /*console.log(activite)*/
+  
     return(
         <Card >
           <CardMedia
