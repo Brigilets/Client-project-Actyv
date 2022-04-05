@@ -1,4 +1,4 @@
-import {Box, Typography } from '@mui/material';
+import {Box, Typography, Button } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 
@@ -94,6 +94,17 @@ const Détails = ({activity}) => {
             >
                 {activity?.description}
             </Typography>
+
+            <a href={`/reservation/${activity?.id}`} style={{textDecoration: 'none'}}>
+            <Button
+              variant="contained"
+              color="secondary"
+              size='medium'
+              sx={{ textTransform: "none", fontWeight: 800, margin:"2em 0em" }}
+            >
+              S'inscrire aux prochaines séances
+            </Button>
+          </a>
 
         </Box>
      );
