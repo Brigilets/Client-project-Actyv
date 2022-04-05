@@ -18,6 +18,7 @@ const ContactForm = () => {
   
   const form = useRef();
 
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -36,6 +37,7 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
+      
   };
 
   return (
