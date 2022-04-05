@@ -63,7 +63,7 @@ const OrganiserCard = ({ organiser }) => {
           </Grid>
 
           <Grid container justifyContent='flex-start' mt={3}>
-            <Link href={`/organisateur/${id}/profil`}>
+            <Link href={`/organisateur/${id}/profil`} sx={{textDecoration: 'none'}}>
               <Button
                 variant="contained"
                 color="secondary"

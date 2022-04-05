@@ -26,6 +26,9 @@ const ContactForm = () => {
   const [message, setMessage] = useState('')
   const [messageError, setMessageError] = useState(false)
   
+  const [send, setSend] = useState(false)
+  console.log(send)
+
   const form = useRef();
   console.log(form)
 
@@ -58,9 +61,12 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
+      setSend(true)
   };
 
   return (
+    <>
+    {(send === false)?  
     <Box id="contact"
       sx={{
           '@media (min-width: 768px)': { padding: '1rem 5rem' },
@@ -319,7 +325,9 @@ const ContactForm = () => {
           Envoyez
         </Button>
       </Box>
-    </Box>
+    </Box> : 
+    <Typography mt={7} color='secondary' sx={{fontSize: '1.5rem', fontFamily: 'Raleway', fontWeight: 600 }}>Merci pour votre message. Nous revenons vers vous le plus vite possible ! </Typography>}
+      </>
   );
 };
 

@@ -27,7 +27,8 @@ const Activity = () =>{
 
   // const p = activities.map(o => o)
   // console.log(p)
-
+  
+  
   return(
       <Box 
         sx={{ 
