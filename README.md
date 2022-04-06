@@ -15,6 +15,9 @@ Projet client
 - Hi-FI prototype : Framer
 - (Headless) CMS + API : Contentful
 - Développement Front-end : React + Material UI
+- Formulaire de contact et Formulaire de réservation sont faits en utisant EmailJS
+- Déployé à: http://actyv.netlify.app
+
 
 ## Le projet
 
@@ -39,19 +42,19 @@ Le projet inclut globalement 3 étapes fondamentales, dont la première, la phas
 Les formulaires d'inscriptions dépendront donc du statut (organisateur ou visiteur). Sur les deux, il pourrait y avoir des informations communes (soit nom/pronom, email, créer un mot de passe, etc.), par contre il devrait avoir de nouveaux éléments qui diffère entre chacun (visiteur ou organisteur, quelle culture l'intéresse ou il représente, ...). Même chose lors de la création des profils respectifs.
 
 - Organisateur :
-    - Photo de profil
+    - Photo de profil 
     - Lieu
-    - Formules d'immersion (culture + prix)
-    - 3 onglets d'informations :
+    - Formules d'immersion (culture + prix) 
+    - 3 onglets d'informations : 
         - Présentation = CV, sur elle, ce qu'elle propose.
         - Formules d'immersions (payant) : sur clique, une carte.
             - Carte avec points numérotés, sur chacun une nouvelle formule d'immersion.
             - Sur un point, aperçu de l'organisateur (photo + les activités qu'il propose)
             - Dans cette carte, on peut retrouver plusieurs autres organisateurs qui font partie de cette même formule d'immersion. Cependant, s'il y en a un parmi eux qui intéresse particulièrement au visiteur, il y a la possibilité de le contacter directement, sans passer par la formule du premier organisateur.
-        - Page: display de photos, vidéos publiés.
+        - Page: display de photos, vidéos publiés. - V
 
 - Visiteur 
-    - Photo de profil
+    - Photo de profil 
     - Quelle culture l'intéresse ?
     - 2 onglets :
         - Page : publications de voeux, photos, vidéos, intérêts...
@@ -60,8 +63,8 @@ Les formulaires d'inscriptions dépendront donc du statut (organisateur ou visit
         - Donc, pour qu'un visiteur puisse retrouver une formule d'immersion, il pourrait soit passer par la recherche d'un organisateur et voir les formules proposées ; soit, cliquer sur l'onglet *Immersion* pour générer des options selon ses préférences, qu'il pourrait naviguer et sélectionner toujours sur une carte.
 
 Dans un premier temps, il faudrait imaginer une maquette avec un design + aperçu visuel des éléments fonctionnelles qu'elle souhaiterait implémenter. Cette maquette pourrait inclure :
-- Logo
-- Charte graphique : couleurs, familles de polices/typographie
+- Logo 
+- Charte graphique : couleurs, familles de polices/typographie 
 - Architecture d'informations (sous forme de mindmap ?) :
     - Nombre estimés de pages
     - Le passage d'une page à l'autre via tels onglets
@@ -69,6 +72,22 @@ Dans un premier temps, il faudrait imaginer une maquette avec un design + aperç
         - Textes
         - Images/vidéos/autre médias
 
+### Les détails réalisés
+- Page d'accueil
+- Page d'organisateur
+   - Photo Prifil
+   - Description
+   - Formules proposés par l'organisateur
+   - Button qui permet la reservation
+- Page de visiteur
+- Page avec des activités
+- Page avec tous organisateurs
+- Formulaire de contact
+- Page de reservation
+
+### Les détails non réalisés
+- Bar de récherche est là, mais on ne fonctionne pas
+- Filtres de récherche soit là, mais ils ne fonctionnent pas 
 
 ### Quelques idées pour le design dans la maquette
 A la base, ce projet est un projet d'immersion dans une culture. Donc il y a des éléments d'hospitalité, d'être accueillant et chaleureux, et d'un sens de passion dans le partage des éléments d'une culture qui invite les autres à la découvrir et à mieux la connaître.

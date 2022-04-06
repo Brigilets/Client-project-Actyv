@@ -67,12 +67,10 @@ const Activity = () =>{
           const result = array.reverse().map(item => item)
           console.log(result) */}
           <Grid container spacing={2} style={{display:'flex', flexDirection: 'row'}} boxSizing="border-box">
-
             { activities.slice().reverse().map((activity, index) => {
               return <Grid item xs={12} sm={12} md={6} lg={3}>
                   <Link href={`/searchresults/${activity.id}`} sx={{ textDecoration:"none" }}>
                     <ActivityCard key={index} activity={activity}/>
-
                   </Link>
               </Grid> 
             })}
