@@ -82,7 +82,7 @@ function Filters() {
             }}>
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 
-                    <FormControl fullWidth >
+                    <FormControl fullWidth disabled>
                         <InputLabel id="demo-simple-select-label">Langues</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -119,7 +119,7 @@ function Filters() {
 
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 
-                    <FormControl fullWidth>
+                    <FormControl fullWidth disabled>
                         <InputLabel id="demo-simple-select-label">Nombre de visiteurs</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -143,7 +143,7 @@ function Filters() {
                 </Grid>
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 
-                    <FormControl fullWidth>
+                    <FormControl fullWidth disabled>
                         <InputLabel id="demo-simple-select-label">Prix</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -163,7 +163,7 @@ function Filters() {
                 </Grid>
                 <Grid item xs={15} sm={15} md={5} lg={3}>
 
-                    <FormControl fullWidth>
+                    <FormControl fullWidth disabled>
                         <InputLabel id="demo-simple-select-label">Communauté</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -192,6 +192,7 @@ function Filters() {
                   variant="contained"
                   type={"submit"}
                   sx={{ color: "white" }}
+                  disabled
                 >
                   Envoyez
                 </Button>
