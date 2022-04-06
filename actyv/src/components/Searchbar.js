@@ -93,6 +93,7 @@ export default function Searchbar() {
                   inputProps={{ 'aria-label': 'search'  }}
                   type="search"
                   fullWidth
+                  disabled
                   />
               </Search>
           </Container>
