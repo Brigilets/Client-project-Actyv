@@ -15,7 +15,9 @@ Projet client
 - Hi-FI prototype : Framer
 - (Headless) CMS + API : Contentful
 - Développement Front-end : React + Material UI
-- actyv.netlify.app
+- Formulaire de contact et Formulaire de réservation sont faits en utisant EmailJS
+- Déployé à: http://actyv.netlify.app
+
 
 ## Le projet
 
