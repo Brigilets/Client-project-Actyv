@@ -10,6 +10,12 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
+    title: 'Activités',
+    path: '/searchresults',
+
+    cName: 'nav-text'
+  },
+  {
     title: 'Organisateurs',
     path: '/organisateur',
 
