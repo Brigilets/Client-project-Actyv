@@ -27,10 +27,8 @@ const ContactForm = () => {
   const [messageError, setMessageError] = useState(false)
   
   const [send, setSend] = useState(false)
-  console.log(send)
 
   const form = useRef();
-  console.log(form)
 
   const sendEmail = (e) => {
     e.preventDefault();

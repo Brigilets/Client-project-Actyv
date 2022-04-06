@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 const Organisers = () => {
   const { id } = useParams();
 
+  
   const [organisers, setOrganisers] = useState([]);
   const { getOrganisers } = useContentful();
   const [activities, setActivities] = useState([]);
@@ -29,12 +30,14 @@ const Organisers = () => {
     getapi();
   }, []);
 
+  // fetching the correct organiser by params 
+  const array = []
+    organisers.forEach(organiser => {if (organiser.id == id) {array.push(organiser)}})
 
   // fetching activities data by user
   const organiserActivities = []
   activities?.forEach((activity) => {
-    if (activity?.emailOrganisateur === organisers[id]?.email) {organiserActivities.push(activity)};
-    console.log(organisers[id]?.nom);
+    if (activity?.emailOrganisateur === array[0]?.email) {organiserActivities.push(activity)};
   });
   
   // fetching activities for full day
@@ -94,7 +97,7 @@ const Organisers = () => {
           </Typography>
           <OrganiserCard
             data-testid="organiser-card"
-            organiser={organisers[id]}
+            organiser={array[0]}
           />
           <Typography
             variant="h2"

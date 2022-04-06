@@ -7,6 +7,7 @@ import OrganiserCard from './OrganiserCard';
 const Organiser = ({id}) =>{
   const [organisers, setOrganisers] = useState([]);
   const { getOrganisers } = useContentful();
+  console.log(organisers.id)
 
   useEffect(() => {
    const getapi = () => {getOrganisers().then((response) => setOrganisers(response))};

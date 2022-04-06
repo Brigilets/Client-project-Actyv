@@ -21,16 +21,6 @@ export default function ControlledAccordions({
     setExpanded(isExpanded ? panel : false);
   };
 
-  console.log(tailorMade);
-  const empty = () => {
-    if (tailorMade.length === 0) {
-      return "vide";
-    } else {
-      return "rempli";
-    }
-  };
-  console.log(empty());
-
   const style = {
     accordion: {
       borderBottom: "3px solid #370665",
