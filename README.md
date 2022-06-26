@@ -12,6 +12,7 @@
 - Déployé à Netlify: http://actyv.netlify.app
 
 ### Lancer le script dans localhost: 
+- cd actyv
 - npm start
 
 ### Prequesites pour lancer le site:
