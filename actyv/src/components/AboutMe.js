@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Card, CardMedia, Typography } from '@mui/material';
-import picture from '../img/Picture1.jpg';
+import picture from '../img/atomium.jpg';
 
 
 export default function BasicGrid() {
@@ -43,8 +43,8 @@ export default function BasicGrid() {
                     <Typography
                     textAlign="justify" fontFamily="Raleway" sx={{alignItems:"center", padding:"0.5rem"}}
                     >
-                    Je me nomme Arzina Ismael Fataki (Belge). Née au Congo RDC et je vis en Belgique depuis 1991, j’ai milité dans plusieurs associations culturelles en Belgique et en France. Toujours active dans l’associatif, je suis notamment passée par le Service Civil International (SCI) dont j’ai été membre du conseil d’administration de 2002 à 2010. En 2015, j’ai été sélectionné parmi les finalistes pour le projet CMM « Connais Moi Mieux » au concours Beforbusiness. Je suis vendeuse de formation avec une expériences de 17 ans dans la même entreprise située au 7 rue neuve à Bruxelles.   
-                    </Typography>
+                    Notre objectif est de promouvoir la paix et le dialogue entre communautés à travers les échanges interculturels. La lutte contre le racisme et les préjugés est indispensable pour un meilleur vivre-ensemble et une baisse des tensions qui nous divisent. Notre conviction est que cela passe par une connaissance de l'autre.
+                        </Typography>
                 </Grid>
             </Grid>
         </Box>
