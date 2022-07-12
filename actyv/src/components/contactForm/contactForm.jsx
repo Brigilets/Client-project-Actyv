@@ -103,7 +103,7 @@ const ContactForm = () => {
               <Grid item xs={4}>
                 <Grid container>
                   <Grid item>
-                    <Typography color="secondary"> Status: </Typography>
+                    <Typography color="secondary"> Statut: </Typography>
                   </Grid>
                   <Grid item ml={3}>
                     <FormControl>
